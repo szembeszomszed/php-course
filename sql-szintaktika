@@ -1,0 +1,37 @@
+SQL szintaktika
+
+---Adatbevitel---
+
+INSERT INTO `tablaneve` (`mezoneve1, `mezoneve2`,...) VALUES('adat1', 'adat2', ...)
+
+FONTOS: ,
+figyeljünk a sorrendre adatbevitelnél
+minden adat sorrendben a felvett mezőnévhez tartozik
+
+
+---Módosítás---
+
+UPDATE `tablaneve` SET `mezo`='ujertek' WHERE `mezo`='adat'
+
+
+
+---Lekérések---
+
+SELECT micsodat FROM `tablaneve`
+
+    Mezők lekérése egy táblából
+    SELECT `mezoneve1`, `mezoneve2`, ... FROM `tablaneve`
+
+    Mezők lekérése egy táblából feltétel alapján
+    SELECT `mezoneve1`, `mezoneve2`, ... FROM `tablaneve` WHERE `mezo`='ertek'
+
+    Limitált lekérések
+    SELECT micsodat FROM `tablaneve` LIMIT(honnan -> opcionális) mennyit
+
+    Sorrend beállítása
+    SELECT micsodat FROM `tablaneve` ORDER BY `mezo` ASC/DESC (-> növekvő/csökkenő sorrend)
+    
+
+
+
+
