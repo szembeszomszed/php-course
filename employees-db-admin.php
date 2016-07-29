@@ -36,6 +36,20 @@ if(filter_input(INPUT_GET, 'tid', FILTER_VALIDATE_INT)) {
     $tid = NULL;
 }
 
+if(filter_input(INPUT_GET, 'order')) {
+    $orderBy = filter_input(INPUT_GET, 'order');
+} else {
+    $orderBy = NULL;
+    //var_dump($orderBy);
+}
+
+if(filter_input(INPUT_GET, 'dir')) {
+    $direction = filter_input(INPUT_GET, 'dir');
+} else {
+    $direction = NULL;
+    //var_dump($direction);
+}
+
 switch ($action) {
     case 'del':
         if (filter_input(INPUT_GET, 'confirm')) {
@@ -78,7 +92,7 @@ switch ($action) {
         }
         break;
     case 'mod':
-        echo ( $tid ? "Módosítás ".$tid : 'nincs értelmes id');
+        echo ( $tid ? "Módosítás ".$tid : 'nincs értelmezhető azonosító');
         $dataToModify = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees WHERE `employeeNumber` = '$tid'") or die(mysqli_error($dblink));
         $row = mysqli_fetch_assoc($dataToModify) or die(mysqli_error($dblink));
         //var_dump($row);
@@ -218,33 +232,93 @@ switch ($action) {
              //echo $data['keresztnev'];
              mysqli_query($dblink, "INSERT INTO employees(`employeeNumber`, `firstName`, `lastName`, `extension`, `email`) VALUES ('$data[azonosito]', '$data[keresztnev]', '$data[vezeteknev]', '$data[mellek]', '$data[email]')") or die(mysqli_error($dblink));
              //mysqli_query($dblink, "INSERT INTO employees(`employeeNumber`, `firstName`, `lastName`, `extension`, `email`) VALUES ('9999', 'Elek', 'Teszt', 'x9876', 'elek.teszt@minta.hu')") or die(mysqli_error($dblink));
-             echo '<p style="color: red;">Record has been added succesfully.</p>';
+             echo '<p style="color: red;">Az adat sikeresen hozzáadva</p>';
          }
     // INNEN SZÁNDÉKOSAN HIÁNYZIK A BREAK??
 
     default:
         /*************Listázás**************/
-        $eredmeny = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees") or die(mysqli_error($dblink)); // a súgó a jelek szerint nem mindenhova tesz ``-t
-        $output = '<a href="?act=new">Új felvitel</a>'
-            . '<table border="1" style="border-collapse: collapse;">'
-            . '<tr>'
-            . '<th>Azonosító</th>'
-            . '<th>Név</th>'
-            . '<th>Mellék</th>'
-            . '<th>Email</th>'
-            . '<th>Művelet</th>'
-            . '</tr>';
+        if ($orderBy == 'empnum') {
 
-        while ($row = mysqli_fetch_assoc($eredmeny)) {
-            $output .= "<tr>"
-                . "<td>{$row['employeeNumber']}</td>"
-                . "<td>{$row['firstName']} {$row['lastName']}</td>"
-                . "<td>{$row['extension']}</td>"
-                . "<td>{$row['email']}</td>"
-                . "<td><a href='?act=mod&amp;tid={$row['employeeNumber']}''>Módosít</a> | <a href='?act=del&amp;tid={$row['employeeNumber']}'>Töröl</a></td>"
-                . "</tr>";
+            if ($direction == "asc") {
+                $dataToOrder = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees ORDER BY `employeeNumber` ASC") or die(mysqli_error($dblink));
+            } elseif ($direction == "desc") {
+                $dataToOrder = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees ORDER BY `employeeNumber` DESC") or die(mysqli_error($dblink));
+            } else {
+                $dataToOrder = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees ORDER BY `employeeNumber` ASC") or die(mysqli_error($dblink));
+            }
+        } elseif ($orderBy == 'first') {
+            if ($direction == "asc") {
+                $dataToOrder = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees ORDER BY `firstName` ASC") or die(mysqli_error($dblink));
+            } elseif ($direction == "desc") {
+                $dataToOrder = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees ORDER BY `firstName` DESC") or die(mysqli_error($dblink));
+            } else {
+                $dataToOrder = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees ORDER BY `firstName` ASC") or die(mysqli_error($dblink));
+            }
+        } elseif ($orderBy == 'ext') {
+            if ($direction == "asc") {
+                $dataToOrder = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees ORDER BY `extension` ASC") or die(mysqli_error($dblink));
+            } elseif ($direction == "desc") {
+                $dataToOrder = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees ORDER BY `extension` DESC") or die(mysqli_error($dblink));
+            } else {
+                $dataToOrder = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees ORDER BY `extension` ASC") or die(mysqli_error($dblink));
+            }
+        } elseif ($orderBy == 'email') {
+            if ($direction == "asc") {
+                $dataToOrder = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees ORDER BY `email` ASC") or die(mysqli_error($dblink));
+            } elseif ($direction == "desc") {
+                $dataToOrder = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees ORDER BY `email` DESC") or die(mysqli_error($dblink));
+            } else {
+                $dataToOrder = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees ORDER BY `email` ASC") or die(mysqli_error($dblink));
+            }
+        } else {
+            $dataToOrder = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees ORDER BY `employeeNumber` ASC") or die(mysqli_error($dblink));
         }
-        $output .= '</table>';
+            $output = '<a href="?act=new">Új felvitel</a><br/><br/>'
+                . '<table border="1" style="border-collapse: collapse;">'
+                . '<tr>'
+                . '<th style="width:100px"><a href="?order=empnum&amp;dir=asc"><i class="fa fa-angle-double-up"></i></a> Azonosító <a href="?order=empnum&amp;dir=desc"><i class="fa fa-angle-double-down"></i></a></th>'
+                . '<th style="width:130px"><a href="?order=first&amp;dir=asc"><i class="fa fa-angle-double-up"></i></a> Név <a href="?order=first&amp;dir=desc"><i class="fa fa-angle-double-down"></i></a></th>'
+                . '<th style="width:80px"><a href="?order=ext&amp;dir=asc"><i class="fa fa-angle-double-up"></i></a> Mellék <a href="?order=ext&amp;dir=desc"><i class="fa fa-angle-double-down"></i></a></th>'
+                . '<th style="width:200px"><a href="?order=email&amp;dir=asc"><i class="fa fa-angle-double-up"></i></a> Email <a href="?order=email&amp;dir=desc"><i class="fa fa-angle-double-down"></i></a></th>'
+                . '<th>Művelet</th>'
+                . '</tr>';
+
+            while ($row = mysqli_fetch_assoc($dataToOrder)) {
+                $output .= "<tr>"
+                    . "<td style=\"width:100px\">{$row['employeeNumber']}</td>"
+                    . "<td style=\"width:130px\">{$row['firstName']} {$row['lastName']}</td>"
+                    . "<td style=\"width:80px\">{$row['extension']}</td>"
+                    . "<td style=\"width:200px\">{$row['email']}</td>"
+                    . "<td><a href='?act=mod&amp;tid={$row['employeeNumber']}''>Módosít</a> | <a href='?act=del&amp;tid={$row['employeeNumber']}'>Töröl</a></td>"
+                    . "</tr>";
+            }
+
+            $output .= '</table>';
+/*
+        } else {
+            $eredmeny = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees") or die(mysqli_error($dblink)); // a súgó a jelek szerint nem mindenhova tesz ``-t
+            $output = '<a href="?act=new">Új felvitel</a><br/><br/>'
+                . '<table border="1" style="border-collapse: collapse;">'
+                . '<tr>'
+                . '<th style="width:100px"><a href="?order=empnum&amp;dir=asc"><i class="fa fa-angle-double-up"></i></a> Azonosító <a href="?order=empnum&amp;dir=desc"><i class="fa fa-angle-double-down"></i></a></th>'
+                . '<th style="width:130px"><a href="?order=first&amp;dir=asc"><i class="fa fa-angle-double-up"></i></a> Név <a href="?order=first&amp;dir=desc"><i class="fa fa-angle-double-down"></i></a></th>'
+                . '<th style="width:80px"><a href="?order=ext&amp;dir=asc"><i class="fa fa-angle-double-up"></i></a> Mellék <a href="?order=ext&amp;dir=desc"><i class="fa fa-angle-double-down"></i></a></th>'
+                . '<th style="width:200px"><a href="?order=email&amp;dir=asc"><i class="fa fa-angle-double-up"></i></a> Email <a href="?order=email&amp;dir=desc"><i class="fa fa-angle-double-down"></i></a></th>'
+                . '<th>Művelet</th>'
+                . '</tr>';
+
+            while ($row = mysqli_fetch_assoc($eredmeny)) {
+                $output .= "<tr>"
+                    . "<td style=\"width:100px\">{$row['employeeNumber']}</td>"
+                    . "<td style=\"width:130px\">{$row['firstName']} {$row['lastName']}</td>"
+                    . "<td style=\"width:80px\">{$row['extension']}</td>"
+                    . "<td style=\"width:200px\">{$row['email']}</td>"
+                    . "<td><a href='?act=mod&amp;tid={$row['employeeNumber']}''>Módosít</a> | <a href='?act=del&amp;tid={$row['employeeNumber']}'>Töröl</a></td>"
+                    . "</tr>";
+            }
+            $output .= '</table>';
+        } */
         break;
 }
 
@@ -256,8 +330,36 @@ switch ($action) {
 <head>
     <meta charset="UTF-8">
     <title>almalmazottak PHP megjelenítése</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
-<body>
+<body><!--
+    <div class="form">
+        <form method="get">
+            <strong><p>Rendezés alapja</p></strong>
+            <label for="rendezes">Azonosító</label>
+            <input type="radio" name="rendezes" value="azonosito">
+            <label for="rendezes">Keresztnév</label>
+            <input type="radio" name="rendezes" value="keresztnev">
+            <label for="rendezes">Vezetéknév</label>
+            <input type="radio" name="rendezes" value="vezeteknev">
+            <label for="rendezes">Mellék</label>
+            <input type="radio" name="rendezes" value="mellek">
+            <label for="rendezes">Email</label>
+            <input type="radio" name="rendezes" value="email">
+            <br/>
+            <strong><p>Rendezés iránya</p></strong>
+            <select name="irany">
+                <option value="0">----Válassz irányt----</option>
+                <option value="1">Növekvő</option>
+                <option value="2">Csökkenő</option>
+            </select>
+            <br/>
+            <input type="submit" name="submit" value="Rendez">
+        </form>
+    </div>
+    -->
 <?php
 echo $output;
 ?>
