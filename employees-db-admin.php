@@ -103,6 +103,7 @@ switch ($action) {
         $dataToModify = mysqli_query($dblink, "SELECT `employeeNumber`, `firstName`, `lastName`, extension, email FROM employees WHERE `employeeNumber` = '$tid'") or die(mysqli_error($dblink));
         $row = mysqli_fetch_assoc($dataToModify) or die(mysqli_error($dblink));
         //var_dump($row);
+        $azonosito = $row['employeeNumber'];
         $firstName = $row['firstName'];
         $lastName = $row['lastName'];
         $extension = $row['extension'];
@@ -163,12 +164,13 @@ switch ($action) {
             $hiba = [];
             $modifiedData = filter_input_array(INPUT_POST, $customFilter, $add_empty = false);
 
-            mysqli_query($dblink, "UPDATE employees SET `firstName`='$modifiedData[keresztnev]', `lastName`='$modifiedData[vezeteknev]', `extension`='$modifiedData[mellek]', `email`='$modifiedData[email]' WHERE `employeeNumber` = '$tid'") or die(mysqli_error($dblink));
+            mysqli_query($dblink, "UPDATE employees SET `employeeNumber`='$modifiedData[azonosito]',`firstName`='$modifiedData[keresztnev]', `lastName`='$modifiedData[vezeteknev]', `extension`='$modifiedData[mellek]', `email`='$modifiedData[email]' WHERE `employeeNumber` = '$tid'") or die(mysqli_error($dblink));
 
             echo '<p style="color: red;">Az adat sikeresen módosítva lett.</p>';
         }
         break;
     case 'new':
+        $hiba = [];
         echo '<a href="?act=list">Vissza</a> | <h2>Új felvitel</h2>';
         echo
         '<form method="post">
@@ -221,8 +223,22 @@ switch ($action) {
                  'email' => FILTER_VALIDATE_EMAIL,
              ];
 
-             $hiba = [];
+             //$hiba = [];
              $data = filter_input_array(INPUT_POST, $customFilter, $add_empty = false);
+             if ($data['azonosito'] != "") {
+                 $empNumCheck = mysqli_query($dblink, "SELECT * FROM employees WHERE `employeeNumber` = '$data[azonosito]'") or die(mysqli_error($dblink));
+                 $numberOfRows = mysqli_num_rows($empNumCheck);
+                 if ($numberOfRows > 0) {
+                     $hiba['azonosito'] = '<p style="color: red">A beírt azonosító már létezik az adatbázisban.</p>';
+                     var_dump($hiba);
+                 }
+             }
+
+
+
+
+
+
 
              //echo '<pre>';
              //var_dump($data);
@@ -236,10 +252,11 @@ switch ($action) {
              //var_dump($tablaAdat);
              //echo '</pre>';
 
-             //echo $data['keresztnev'];
-             mysqli_query($dblink, "INSERT INTO employees(`employeeNumber`, `firstName`, `lastName`, `extension`, `email`) VALUES ('$data[azonosito]', '$data[keresztnev]', '$data[vezeteknev]', '$data[mellek]', '$data[email]')") or die(mysqli_error($dblink));
-             //mysqli_query($dblink, "INSERT INTO employees(`employeeNumber`, `firstName`, `lastName`, `extension`, `email`) VALUES ('9999', 'Elek', 'Teszt', 'x9876', 'elek.teszt@minta.hu')") or die(mysqli_error($dblink));
-             echo '<p style="color: red;">Az adat sikeresen hozzáadva</p>';
+             if (empty($hiba)) {
+                 mysqli_query($dblink, "INSERT INTO employees(`employeeNumber`, `firstName`, `lastName`, `extension`, `email`) VALUES ('$data[azonosito]', '$data[keresztnev]', '$data[vezeteknev]', '$data[mellek]', '$data[email]')") or die(mysqli_error($dblink));
+                 echo '<p style="color: red;">Az adat sikeresen hozzáadva</p>';
+             }
+
          }
     // INNEN SZÁNDÉKOSAN HIÁNYZIK A BREAK??
 
