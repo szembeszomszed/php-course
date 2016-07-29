@@ -4,7 +4,7 @@
 if (isset($_POST['user_name'])) {
     session_start();
     $_SESSION['name'] = $_POST['user_name']; //a session name kulcsára beállítjuk a formba beírt user_name-kulcsot
-    header("Location: sessionprofil.php"); //átírányítom a megfelelő oldalra
+    header("Location: sessionprofil_0725.php"); //átírányítom a megfelelő oldalra
     
 }
 

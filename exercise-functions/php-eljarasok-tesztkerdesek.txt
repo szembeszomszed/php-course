@@ -1,0 +1,20 @@
+﻿1) Írjunk egy eljárást, ami egy számnak kiszámolja a faktoriális értékét
+
+
+
+2) Írjunk egy eljárást  hogy leellenőrizzük hogy a szám prím e vagy sem
+   A primszám egy természetes szám, ami nagyobb mint 1 és kizáróan 1el és önmagával lehet osztani
+
+  
+
+3) Írjunk egy eljárást, melynek segítségével fordítva írunk ki egy sztringet
+
+
+
+4) Írjunk egy eljárást ami egy tömböt rendez
+
+
+
+5) Írjunk egy fügvényt, ami megvizsgálja hogy egy string kisbetüs
+
+  

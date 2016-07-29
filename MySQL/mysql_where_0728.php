@@ -31,7 +31,7 @@ $eredmeny = mysql_query("SELECT * FROM pelda WHERE age LIKE '2%'") or die(mysql_
 
 
 // gyűjtsük be a kapott eredményeket
-// mivel tübb eredményre számítunk, jöhet a while
+// mivel több eredményre számítunk, jöhet a while
 // más kérdés, hogy nálam csak egy ember esik bele ebbe a tartományba, így csak egy eredmény lesz
 
 while($row = mysql_fetch_array($eredmeny)) { 

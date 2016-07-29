@@ -2,7 +2,7 @@
 
 session_start();
 if (!isset($_SESSION['name'])) {
-    header("Location: session-bejelentkezik.php"); //ha nem lett beállítva a name, visszairányítjuk az előző oldalra
+    header("Location: session-bejelentkezik_0725.php"); //ha nem lett beállítva a name, visszairányítjuk az előző oldalra
 } else {
     $name = $_SESSION['name'];
     
@@ -20,6 +20,6 @@ if (!isset($_SESSION['name'])) {
     </head>
     <body>
         <h1>Hello <?php echo $name;?></h1>
-        <h3><a href="session-kijelentkezik.php">Kijelentkezés</a></h3>
+        <h3><a href="session-kijelentkezik_0725.php">Kijelentkezés</a></h3>
     </body>
 </html>
