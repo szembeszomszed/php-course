@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+if (!isset($_SESSION['name'])) {
+    header("Location: employees-db.php"); //ha nem lett beállítva a name, visszairányítjuk az előző oldalra
+} else {
+    $name = $_SESSION['name'];
+}
+
 //házi feladat:
 //1) az új felvitelre jelenjen meg egy form, ahol felvihetünk adatokat az employeesba
 //2) a módosítás linkre kattintva lehessen módosítani a már feltöltött értékeken, mindezt úgy, hogy egy űrlapba betölti a jelenlegi értékeket, majd gombnyomásra változik
@@ -334,7 +341,10 @@ switch ($action) {
     <!-- Icons -->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
-<body><!--
+<body>
+<p style="margin-left: 1100px;"><a href="employees-db.php">Kijelentkezés</a></p>
+
+<!--
     <div class="form">
         <form method="get">
             <strong><p>Rendezés alapja</p></strong>
