@@ -95,7 +95,7 @@ switch ($action) {
 
         if ($confirm == "delete") {
             mysqli_query($dblink, "DELETE FROM employees WHERE `employeeNumber` = '$tid'") or die(mysqli_error($dblink));
-            $output = '<a href="?act=list">Vissza</a> <br/><br/> <p style="color: red;">Az adat sikeresen törölve.</p>';
+            $output = '<a href="?act=list">Vissza</a> <br/><br/> <p style="color: red;">Az adatok sikeresen törölve.</p>';
         }
         break;
     case 'mod':
@@ -166,7 +166,7 @@ switch ($action) {
 
             mysqli_query($dblink, "UPDATE employees SET `employeeNumber`='$modifiedData[azonosito]',`firstName`='$modifiedData[keresztnev]', `lastName`='$modifiedData[vezeteknev]', `extension`='$modifiedData[mellek]', `email`='$modifiedData[email]' WHERE `employeeNumber` = '$tid'") or die(mysqli_error($dblink));
 
-            echo '<p style="color: red;">Az adat sikeresen módosítva lett.</p>';
+            echo '<p style="color: red;">Az adatok sikeresen módosítva lettek.</p>';
         }
         break;
     case 'new':
@@ -209,13 +209,27 @@ switch ($action) {
                     //var_dump($hiba);
                 }
             }
+
+            if (!$data['email']) {
+                $hiba['email'] = '<p style="color: red; display: inline;">Hibás email-formátum</p>';
+            }
+
+            if ($data['email'] != "") {
+                $empNumCheck = mysqli_query($dblink, "SELECT * FROM employees WHERE `email` = '$data[email]'") or die(mysqli_error($dblink));
+                $numberOfRows = mysqli_num_rows($empNumCheck);
+                if ($numberOfRows > 0) {
+                    $hiba['email'] = '<p style="color: red; display: inline;">A beírt email-cím már létezik az adatbázisban.</p>';
+                    //var_dump($hiba);
+                }
+            }
+
             if (empty($hiba)) {
                 mysqli_query($dblink, "INSERT INTO employees(`employeeNumber`, `firstName`, `lastName`, `extension`, `email`) VALUES ('$data[azonosito]', '$data[keresztnev]', '$data[vezeteknev]', '$data[mellek]', '$data[email]')") or die(mysqli_error($dblink));
-                echo '<p style="color: red;">Az adat sikeresen hozzáadva</p>';
+                echo '<p style="color: red;">Az adatok sikeresen hozzáadva</p>';
             }
         }
 
-        echo '<a href="?act=list">Vissza</a> | <h2>Új felvitel</h2>';
+        echo '<a href="?act=list">Vissza</a>';
         echo
         '<form method="post">
             <label for="azonosito">Azonosító</label>
@@ -236,7 +250,7 @@ switch ($action) {
             <br/><br/>
             <label for="email">Email</label>
             <br/>
-            <input type="text" name="email" placeholder="kminta@classicmodelcars.com" size="30">
+            <input type="text" name="email" placeholder="kminta@classicmodelcars.com" size="30">' . ((empty($hiba["email"]) ? "" : $hiba["email"])) . '
             <br/><br/>
             <input type="submit" name="submit" value="Rögzít">
 
