@@ -171,12 +171,56 @@ switch ($action) {
         break;
     case 'new':
         $hiba = [];
+        if (filter_input(INPUT_POST, 'submit')) {
+            $hiba = [];
+            function extensionCheck($extension)
+            {
+                if (strlen($extension) != 0 && $extension[0] == 'x') {
+                    return $extension;
+                }
+                return false;
+            }
+
+            $customFilter = [
+                'keresztnev' => [
+                    'filter' => FILTER_CALLBACK,
+                    'options' => 'ucwords',
+                ],
+                'vezeteknev' => [
+                    'filter' => FILTER_CALLBACK,
+                    'options' => 'ucwords',
+                ],
+                'mellek' => [
+                    'filter' => FILTER_CALLBACK,
+                    'options' => 'extensionCheck',
+                ],
+                'azonosito' => FILTER_VALIDATE_INT,
+                'email' => FILTER_VALIDATE_EMAIL,
+            ];
+
+            // végül ez nem lett használva, mert egyszerűbb megoldás is akadt
+            //$tablaAdat = filter_var_array($beirtAdat, $customFilter);
+            $data = filter_input_array(INPUT_POST, $customFilter, $add_empty = false);
+            if ($data['azonosito'] != "") {
+                $empNumCheck = mysqli_query($dblink, "SELECT * FROM employees WHERE `employeeNumber` = '$data[azonosito]'") or die(mysqli_error($dblink));
+                $numberOfRows = mysqli_num_rows($empNumCheck);
+                if ($numberOfRows > 0) {
+                    $hiba['azonosito'] = '<p style="color: red; display: inline;">A beírt azonosító már létezik az adatbázisban.</p>';
+                    //var_dump($hiba);
+                }
+            }
+            if (empty($hiba)) {
+                mysqli_query($dblink, "INSERT INTO employees(`employeeNumber`, `firstName`, `lastName`, `extension`, `email`) VALUES ('$data[azonosito]', '$data[keresztnev]', '$data[vezeteknev]', '$data[mellek]', '$data[email]')") or die(mysqli_error($dblink));
+                echo '<p style="color: red;">Az adat sikeresen hozzáadva</p>';
+            }
+        }
+
         echo '<a href="?act=list">Vissza</a> | <h2>Új felvitel</h2>';
         echo
         '<form method="post">
             <label for="azonosito">Azonosító</label>
             <br/>
-            <input type="text" name="azonosito" placeholder="1234" size="30">
+            <input type="text" name="azonosito" placeholder="1234" size="30">' . ((empty($hiba["azonosito"]) ? "" : $hiba["azonosito"])) . '
             <br/><br/>
             <label for="keresztnev">Keresztnév</label>
             <br/>
@@ -197,67 +241,7 @@ switch ($action) {
             <input type="submit" name="submit" value="Rögzít">
 
         </form>';
-         if (filter_input(INPUT_POST, 'submit')) {
 
-             function extensionCheck ($extension) {
-                 if (strlen($extension) != 0 && $extension[0] == 'x') {
-                     return $extension;
-                 }
-                 return false;
-             }
-
-             $customFilter = [
-                 'keresztnev' => [
-                     'filter' => FILTER_CALLBACK,
-                     'options' => 'ucwords',
-                 ],
-                 'vezeteknev' => [
-                     'filter' => FILTER_CALLBACK,
-                     'options' => 'ucwords',
-                 ],
-                 'mellek' => [
-                     'filter' => FILTER_CALLBACK,
-                     'options' => 'extensionCheck',
-                 ],
-                 'azonosito' => FILTER_VALIDATE_INT,
-                 'email' => FILTER_VALIDATE_EMAIL,
-             ];
-
-             //$hiba = [];
-             $data = filter_input_array(INPUT_POST, $customFilter, $add_empty = false);
-             if ($data['azonosito'] != "") {
-                 $empNumCheck = mysqli_query($dblink, "SELECT * FROM employees WHERE `employeeNumber` = '$data[azonosito]'") or die(mysqli_error($dblink));
-                 $numberOfRows = mysqli_num_rows($empNumCheck);
-                 if ($numberOfRows > 0) {
-                     $hiba['azonosito'] = '<p style="color: red">A beírt azonosító már létezik az adatbázisban.</p>';
-                     var_dump($hiba);
-                 }
-             }
-
-
-
-
-
-
-
-             //echo '<pre>';
-             //var_dump($data);
-             //echo '</pre>';
-
-
-             // végül ez nem lett használva, mert egyszerűbb megoldás is akadt
-             //$tablaAdat = filter_var_array($beirtAdat, $customFilter);
-
-             //echo '<pre>';
-             //var_dump($tablaAdat);
-             //echo '</pre>';
-
-             if (empty($hiba)) {
-                 mysqli_query($dblink, "INSERT INTO employees(`employeeNumber`, `firstName`, `lastName`, `extension`, `email`) VALUES ('$data[azonosito]', '$data[keresztnev]', '$data[vezeteknev]', '$data[mellek]', '$data[email]')") or die(mysqli_error($dblink));
-                 echo '<p style="color: red;">Az adat sikeresen hozzáadva</p>';
-             }
-
-         }
     // INNEN SZÁNDÉKOSAN HIÁNYZIK A BREAK??
 
     default:
