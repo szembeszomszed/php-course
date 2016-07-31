@@ -19,11 +19,13 @@ if (filter_input(INPUT_GET, 'act')) {
     $action = 'list';
 }
 
+/*
 if (filter_input(INPUT_GET, 'order')) {
     $order = filter_input(INPUT_GET, 'order');
 } else {
     $order = 'list';
 }
+*/
 
 if (filter_input(INPUT_GET, 'pid')) {
     $productId = filter_input(INPUT_GET, 'pid');
@@ -173,6 +175,157 @@ switch ($action) {
                 . '<p style="color: green;">Record has been deleted.</p>';
         }
     break;
+
+    case 'mod':
+        $output = '<a href="?act=list">Back to list</a><br/><br/>';
+        $output .= '<h3>Modify the following record:</h3>';
+        $dataToModify = mysqli_query($dblink, "SELECT `productCode`, `productName`, `productLine`, `quantityInStock`, `buyPrice` FROM products WHERE `productCode` = '$productId'") or die(mysqli_error($dblink));
+        $row = mysqli_fetch_assoc($dataToModify) or die(mysqli_error());
+        $productCode = $row['productCode'];
+        $productName = $row['productName'];
+        $productLine = $row['productLine'];
+        $quantityInStock = $row['quantityInStock'];
+        $buyPrice = $row['buyPrice'];
+        $formError = [];
+
+        $output .= '<form method="post">'
+            . '<label for="pid">Product Code</label>'
+            . '<br/>'
+            . '<input type="text" name="pid" placeholder="S00-0000" value="'.$productCode.'" size="40">' . (empty($formError["pid"]) ? "" : $formError["pid"])
+            . '<br/>'
+            . '<br/>'
+            . '<label for="pname">Product Name</label>'
+            . '<br/>'
+            . '<input type="text" name="pname" placeholder="Sample Product" value="'.$productName.'"size="40">' . (empty($formError["pname"]) ? "" : $formError["pname"])
+            . '<br/>'
+            . '<br/>'
+            . '<label for="pline">Product Line</label>'
+            . '<br/>'
+            . '<input type="text" name="pline" placeholder="Sample Product Line" value="'.$productLine.'"size="40">' . (empty($formError["pline"]) ? "" : $formError["pline"])
+            . '<br/>'
+            . '<br/>'
+            . '<label for="quant">Quantity in Stock</label>'
+            . '<br/>'
+            . '<input type="text" name="quant" placeholder="1234" value="'.$quantityInStock.'"size="40">' . (empty($formError["quant"]) ? "" : $formError["quant"])
+            . '<br/>'
+            . '<br/>'
+            . '<label for="bprice">Buy Price</label>'
+            . '<br/>'
+            . '<input type="text" name="bprice" placeholder="12.34" value="'.$buyPrice.'"size="40">' . (empty($formError["bprice"]) ? "" : $formError["bprice"])
+            . '<br/>'
+            . '<br/>'
+            . '<input type="submit" name="submit" value="Submit">'
+            . '</form>';
+
+        if (filter_input(INPUT_POST, 'submit')) {
+            $customFilter = [
+                'pid' => FILTER_SANITIZE_STRING,
+                'pname' => FILTER_SANITIZE_STRING,
+                'pline' => FILTER_SANITIZE_STRING,
+                'quant' => FILTER_VALIDATE_INT,
+                'bprice' => FILTER_VALIDATE_FLOAT,
+            ];
+
+            $modifiedData = filter_input_array(INPUT_POST, $customFilter, $add_empty = true);
+
+            // ERROR HANDLING
+
+            if ($modifiedData['pid'] == "") {
+                $formError['pid'] = '<p style="color: red; display: inline;">Field can not be empty.</p>';
+            } elseif (mb_substr($modifiedData['pid'], 0, 1) != "S" || strpos($modifiedData['pid'], "_") == false) {
+                $formError['pid'] = '<p style="color: red; display: inline;">Required format for Product Code: S12_3456</p>';
+            }
+
+            if ($modifiedData['pname'] == "") {
+                $formError['pname'] = '<p style="color: red; display: inline;">Field can not be empty.</p>';
+            }
+
+            if ($modifiedData['pline'] == "") {
+                $formError['pline'] = '<p style="color: red; display: inline;">Field can not be empty.</p>';
+            }
+
+            if ($modifiedData['quant'] == "") {
+                $formError['quant'] = '<p style="color: red; display: inline;">Field can not be empty.</p>';
+            }
+
+            if ($modifiedData['bprice'] == "") {
+                $formError['bprice'] = '<p style="color: red; display: inline;">Field can not be empty.</p>';
+            }
+
+            if (empty($formError)) {
+                mysqli_query($dblink, "UPDATE products SET `productName` = '$modifiedData[pname]', `productLine` = '$modifiedData[pline]', `quantityInStock` = '$modifiedData[quant]', `buyPrice` = '$modifiedData[bprice]' WHERE `productCode` = '$productId'") or die(mysqli_error($dblink));
+                $output = '<a href="?act=list">Back to list</a><br/><br/>'
+                    . '<p style="color: green;">Record has been modified.</p>';
+            }
+        }
+        break;
+    case "order":
+        if (filter_input(INPUT_POST, 'submit')) {
+            //$output = '<a href="?act=list">Back to list</a><br/><br/>';
+            $orderChoice = filter_input_array(INPUT_POST);
+            //var_dump($orderChoice);
+
+            $orderBy = $orderChoice['ordby'];
+            $dir = $orderChoice['dir'];
+
+            function orderTable ($ord, $dir) {
+                global $dblink;
+                $result = mysqli_query($dblink, "SELECT `productCode`, `productName`, `productLine`, `quantityInStock`, `buyPrice` FROM products ORDER BY `$ord` $dir") or die(mysqli_error($dblink));
+                echo '<br/><br/><table border="1" style="border-collapse: collapse">'
+                    .'<tr>'
+                    .'<th>Product Code</th>'
+                    .'<th>Product Name</th>'
+                    .'<th>Product Line</th>'
+                    .'<th>Quantity in Stock</th>'
+                    .'<th>Buy Price</th>'
+                    .'</tr>';
+
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<tr>"
+                        . "<td>{$row['productCode']}</td>"
+                        . "<td>{$row['productName']}</td>"
+                        . "<td>{$row['productLine']}</td>"
+                        . "<td>{$row["quantityInStock"]}</td>"
+                        . "<td>{$row["buyPrice"]}</td>"
+                        ."</tr>";
+                }
+
+            }
+            orderTable($orderBy, $dir);
+
+        }
+
+        $output = '<a href="?act=list">Back to list</a><br/><br/>';
+        $output .= '
+        <form method="post">
+            <strong><p>Order by</p></strong>
+            <input type="radio" name="ordby" value="productCode">
+            <label for="ordby">Product Code</label>
+            <br/>
+            <input type="radio" name="ordby" value="productName">
+            <label for="ordby">Product Name</label>
+            <br/>
+            <input type="radio" name="ordby" value="productLine">
+            <label for="ordby">Product Line</label>
+            <br/>
+            <input type="radio" name="ordby" value="quantityInStock">
+            <label for="ordby">Quantity in Stock</label>
+            <br/>
+            <input type="radio" name="ordby" value="buyPrice">
+            <label for="ordby">Buy Price</label>
+            <br/>
+            <strong><p>Direction</p></strong>
+            <select name="dir">
+                <option value="0">----Select Direction----</option>
+                <option value="ASC">Ascending</option>
+                <option value="DESC">Descending</option>
+            </select>
+            <br/><br/>
+            <input type="submit" name="submit" value="Order Table">
+        </form><br/><br/>';
+
+
+        break;
 
     default:
         $result = mysqli_query($dblink, "SELECT `productCode`, `productName`, `productLine`, `quantityInStock`, `buyPrice` FROM products") or die(mysqli_error());
