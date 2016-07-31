@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+if (!isset($_SESSION['name'])) {
+    header("Location: products-db.php"); //ha nem lett beállítva a name, visszairányítjuk az előző oldalra
+} else {
+    $name = $_SESSION['name'];
+}
+
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = "";
@@ -368,6 +375,7 @@ switch ($action) {
         <meta charset="UTF-8">
     </head>
     <body>
+         <p style="margin-left: 1100px;"><a href="products-db.php">Logout</a></p>
         <?php echo $output;?>
     </body>
 
