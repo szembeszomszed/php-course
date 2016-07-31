@@ -201,9 +201,9 @@ switch ($action) {
             // végül ez nem lett használva, mert egyszerűbb megoldás is akadt
             //$tablaAdat = filter_var_array($beirtAdat, $customFilter);
             $data = filter_input_array(INPUT_POST, $customFilter, $add_empty = false);
-            if ($data['azonosito'] != "") {
+            if ($data['azonosito'] != "") { // beírt azonosító keresése az adatbázisban
                 $empNumCheck = mysqli_query($dblink, "SELECT * FROM employees WHERE `employeeNumber` = '$data[azonosito]'") or die(mysqli_error($dblink));
-                $numberOfRows = mysqli_num_rows($empNumCheck);
+                $numberOfRows = mysqli_num_rows($empNumCheck); // a beírt azonosítóval bíró sorok száma az adatbázisban
                 if ($numberOfRows > 0) {
                     $hiba['azonosito'] = '<p style="color: red; display: inline;">A beírt azonosító már létezik az adatbázisban.</p>';
                     //var_dump($hiba);
@@ -351,7 +351,7 @@ switch ($action) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>almalmazottak PHP megjelenítése</title>
+    <title>alkalmazottak PHP megjelenítése</title>
 
     <!-- Icons -->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
