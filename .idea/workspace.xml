@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="749a836f-8fc0-4d18-8819-4373d4756c51" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login_system/login_page.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login_system/login_validation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login_system/password_generator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login_system/signup_form.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/beleptetorendszer/jelszo_validacio.php" afterPath="$PROJECT_DIR$/beleptetorendszer/jelszo_validacio.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,12 +29,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="regisztracio_form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beleptetorendszer/regisztracio_form.php">
+      <file leaf-file-name="password_generator.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/login_system/password_generator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="7.16">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.55495495">
+              <caret line="42" column="55" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+              <folding>
+                <marker date="1470088858342" expanded="true" signature="1060:1102" placeholder="SELECT * FRO..registration..." />
+                <marker date="1470088858342" expanded="true" signature="1060:1104" placeholder="SELECT * FRO..registration..." />
+                <marker date="1470088858342" expanded="true" signature="1060:1111" placeholder="SELECT * FRO..registration..." />
+                <marker date="1470088858342" expanded="true" signature="1288:1383" placeholder="INSERT INTO registration..." />
+                <marker date="1470088858342" expanded="true" signature="1288:1650" placeholder="INSERT INTO registration..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -37,8 +48,8 @@
       <file leaf-file-name="jelszo_generator.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/beleptetorendszer/jelszo_generator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="50.16">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="11.4">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="71" />
               <folding>
                 <marker date="1470045522000" expanded="true" signature="1982:2030" placeholder="SELECT * FRO..registration..." />
                 <marker date="1470045522000" expanded="true" signature="2587:2678" placeholder="INSERT INTO registration..." />
@@ -47,46 +58,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profil.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beleptetorendszer/profil.php">
+      <file leaf-file-name="regisztracio_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/beleptetorendszer/regisztracio_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.84">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-1.52">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="33" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profil_validacio.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beleptetorendszer/profil_validacio.php">
+      <file leaf-file-name="login_validation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login_system/login_validation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="15.96">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-14.44">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="89" />
               <folding>
-                <marker date="1470041990000" expanded="true" signature="1088:1166" placeholder="UPDATE regis..." />
+                <marker date="1470082668300" expanded="true" signature="723:774" placeholder="SELECT * FRO..registration..." />
+                <marker date="1470082668300" expanded="true" signature="723:791" placeholder="SELECT * FRO..registration..." />
+                <marker date="1470082668300" expanded="true" signature="723:803" placeholder="SELECT * FRO..registration..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="session.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/beleptetorendszer/session.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.09810671">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1470037634000" expanded="true" signature="479:532" placeholder="SELECT * FRO..registration..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jelszo_login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beleptetorendszer/jelszo_login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -94,10 +85,76 @@
       <file leaf-file-name="jelszo_validacio.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/beleptetorendszer/jelszo_validacio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="23.12">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="2.28">
+              <caret line="27" column="132" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="132" />
               <folding>
-                <marker date="1470048088000" expanded="true" signature="1187:1259" placeholder="SELECT * FRO..registration..." />
+                <marker date="1470081876331" expanded="true" signature="1188:1260" placeholder="SELECT * FRO..registration..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="employees-db-admin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/employees-db-admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="120.08">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="37" />
+              <folding>
+                <marker date="1469968960114" expanded="true" signature="2539:2652" placeholder="SELECT `empl..employees..." />
+                <marker date="1469968960114" expanded="true" signature="3198:3244" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="3303:3313" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="3361:3372" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="3414:3424" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="3469:3480" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="3575:3585" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="3632:3643" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="3710:3720" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="3773:3784" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="3973:3984" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="4104:4157" placeholder="DELETE FROM ..." />
+                <marker date="1469968960114" expanded="true" signature="4266:4277" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="4477:4590" placeholder="SELECT `empl..employees..." />
+                <marker date="1469968960114" expanded="true" signature="5056:6117" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="7140:7179" placeholder="UPDATE emplo..." />
+                <marker date="1469968960114" expanded="true" signature="7140:7385" placeholder="UPDATE emplo..." />
+                <marker date="1469968960114" expanded="true" signature="7448:7459" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="8843:8910" placeholder="SELECT * FRO..employees..." />
+                <marker date="1469968960114" expanded="true" signature="9157:9167" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="9157:9185" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="9391:9419" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="9557:9611" placeholder="SELECT * FRO..employees..." />
+                <marker date="1469968960114" expanded="true" signature="9797:9825" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="10023:10212" placeholder="INSERT INTO employees..." />
+                <marker date="1469968960114" expanded="true" signature="10278:10289" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="10440:10590" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="10440:11352" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="10440:11353" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="10440:11510" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="11749:11860" placeholder="SELECT `empl..employees..." />
+                <marker date="1469968960114" expanded="true" signature="11994:12106" placeholder="SELECT `empl..employees..." />
+                <marker date="1469968960114" expanded="true" signature="12215:12326" placeholder="SELECT `empl..employees..." />
+                <marker date="1469968960114" expanded="true" signature="12508:12614" placeholder="SELECT `empl..employees..." />
+                <marker date="1469968960114" expanded="true" signature="12748:12855" placeholder="SELECT `empl..employees..." />
+                <marker date="1469968960114" expanded="true" signature="12964:13070" placeholder="SELECT `empl..employees..." />
+                <marker date="1469968960114" expanded="true" signature="13250:13356" placeholder="SELECT `empl..employees..." />
+                <marker date="1469968960114" expanded="true" signature="13490:13597" placeholder="SELECT `empl..employees..." />
+                <marker date="1469968960114" expanded="true" signature="13706:13812" placeholder="SELECT `empl..employees..." />
+                <marker date="1469968960114" expanded="true" signature="13994:14096" placeholder="SELECT `empl..employees..." />
+                <marker date="1469968960114" expanded="true" signature="14230:14333" placeholder="SELECT `empl..employees..." />
+                <marker date="1469968960114" expanded="true" signature="14442:14544" placeholder="SELECT `empl..employees..." />
+                <marker date="1469968960114" expanded="true" signature="14659:14770" placeholder="SELECT `empl..employees..." />
+                <marker date="1469968960114" expanded="true" signature="14927:14953" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="14979:15010" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="15012:15023" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="15230:15241" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="15440:15450" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="15648:15659" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="15988:16045" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="16026:16037" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="16106:16117" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="16200:16210" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="16274:16285" placeholder="..." />
+                <marker date="1469968960114" expanded="true" signature="16951:16982" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -127,6 +184,11 @@
         <option value="$PROJECT_DIR$/employees-db-admin.php" />
         <option value="$PROJECT_DIR$/products-db.php" />
         <option value="$PROJECT_DIR$/products-db-admin.php" />
+        <option value="$PROJECT_DIR$/login_system/login_page.php" />
+        <option value="$PROJECT_DIR$/beleptetorendszer/jelszo_validacio.php" />
+        <option value="$PROJECT_DIR$/login_system/login_validation.php" />
+        <option value="$PROJECT_DIR$/login_system/signup_form.php" />
+        <option value="$PROJECT_DIR$/login_system/password_generator.php" />
       </list>
     </option>
   </component>
@@ -193,6 +255,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -221,21 +285,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MySQL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exercise-functions" />
+              <option name="myItemId" value="login_system" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -255,8 +305,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -264,13 +312,20 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.signup_form.php">
+    <configuration default="false" name="signup_form.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/login_system/signup_form.php">
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
@@ -299,6 +354,14 @@
       <envs />
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.signup_form.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.signup_form.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -315,25 +378,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20937042" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -354,34 +417,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/exercise_0714.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exercise_0714.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exercise_0714.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exercise_0714.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/exercise_0714.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -654,70 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/employees-db-admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.032702237">
-          <caret line="359" column="0" selection-start-line="359" selection-start-column="0" selection-end-line="359" selection-end-column="80" />
-          <folding>
-            <marker date="1469968960114" expanded="true" signature="2539:2652" placeholder="SELECT `empl..employees..." />
-            <marker date="1469968960114" expanded="true" signature="3198:3244" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="3303:3313" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="3361:3372" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="3414:3424" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="3469:3480" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="3575:3585" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="3632:3643" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="3710:3720" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="3773:3784" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="3973:3984" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="4104:4157" placeholder="DELETE FROM ..." />
-            <marker date="1469968960114" expanded="true" signature="4266:4277" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="4477:4590" placeholder="SELECT `empl..employees..." />
-            <marker date="1469968960114" expanded="true" signature="5056:6117" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="7140:7179" placeholder="UPDATE emplo..." />
-            <marker date="1469968960114" expanded="true" signature="7140:7385" placeholder="UPDATE emplo..." />
-            <marker date="1469968960114" expanded="true" signature="7448:7459" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="8843:8910" placeholder="SELECT * FRO..employees..." />
-            <marker date="1469968960114" expanded="true" signature="9157:9167" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="9157:9185" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="9391:9419" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="9557:9611" placeholder="SELECT * FRO..employees..." />
-            <marker date="1469968960114" expanded="true" signature="9797:9825" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="10023:10212" placeholder="INSERT INTO employees..." />
-            <marker date="1469968960114" expanded="true" signature="10278:10289" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="10440:10590" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="10440:11352" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="10440:11353" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="10440:11510" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="11749:11860" placeholder="SELECT `empl..employees..." />
-            <marker date="1469968960114" expanded="true" signature="11994:12106" placeholder="SELECT `empl..employees..." />
-            <marker date="1469968960114" expanded="true" signature="12215:12326" placeholder="SELECT `empl..employees..." />
-            <marker date="1469968960114" expanded="true" signature="12508:12614" placeholder="SELECT `empl..employees..." />
-            <marker date="1469968960114" expanded="true" signature="12748:12855" placeholder="SELECT `empl..employees..." />
-            <marker date="1469968960114" expanded="true" signature="12964:13070" placeholder="SELECT `empl..employees..." />
-            <marker date="1469968960114" expanded="true" signature="13250:13356" placeholder="SELECT `empl..employees..." />
-            <marker date="1469968960114" expanded="true" signature="13490:13597" placeholder="SELECT `empl..employees..." />
-            <marker date="1469968960114" expanded="true" signature="13706:13812" placeholder="SELECT `empl..employees..." />
-            <marker date="1469968960114" expanded="true" signature="13994:14096" placeholder="SELECT `empl..employees..." />
-            <marker date="1469968960114" expanded="true" signature="14230:14333" placeholder="SELECT `empl..employees..." />
-            <marker date="1469968960114" expanded="true" signature="14442:14544" placeholder="SELECT `empl..employees..." />
-            <marker date="1469968960114" expanded="true" signature="14659:14770" placeholder="SELECT `empl..employees..." />
-            <marker date="1469968960114" expanded="true" signature="14927:14953" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="14979:15010" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="15012:15023" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="15230:15241" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="15440:15450" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="15648:15659" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="15988:16045" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="16026:16037" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="16106:16117" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="16200:16210" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="16274:16285" placeholder="..." />
-            <marker date="1469968960114" expanded="true" signature="16951:16982" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/products-db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.032702237">
@@ -787,7 +758,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beleptetorendszer/jelszo_login.php">
+    <entry file="file://$PROJECT_DIR$/beleptetorendszer/profil.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -795,46 +766,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beleptetorendszer/jelszo_validacio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="23.12">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1470048088000" expanded="true" signature="1187:1259" placeholder="SELECT * FRO..registration..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beleptetorendszer/regisztracio_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.16">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beleptetorendszer/jelszo_generator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="50.16">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1470045522000" expanded="true" signature="1982:2030" placeholder="SELECT * FRO..registration..." />
-            <marker date="1470045522000" expanded="true" signature="2587:2678" placeholder="INSERT INTO registration..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beleptetorendszer/profil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.84">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/beleptetorendszer/profil_validacio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="15.96">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1470041990000" expanded="true" signature="1088:1166" placeholder="UPDATE regis..." />
@@ -844,10 +778,153 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/beleptetorendszer/session.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.09810671">
+        <state vertical-scroll-proportion="13.68">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1470037634000" expanded="true" signature="479:532" placeholder="SELECT * FRO..registration..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beleptetorendszer/jelszo_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13693693">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beleptetorendszer/jelszo_validacio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.28">
+          <caret line="27" column="132" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="132" />
+          <folding>
+            <marker date="1470081876331" expanded="true" signature="1188:1260" placeholder="SELECT * FRO..registration..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beleptetorendszer/regisztracio_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.52">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="33" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login_system/signup_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7873874">
+          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login_system/login_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7873874">
+          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login_system/login_validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.44">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="89" />
+          <folding>
+            <marker date="1470082668300" expanded="true" signature="723:774" placeholder="SELECT * FRO..registration..." />
+            <marker date="1470082668300" expanded="true" signature="723:791" placeholder="SELECT * FRO..registration..." />
+            <marker date="1470082668300" expanded="true" signature="723:803" placeholder="SELECT * FRO..registration..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employees-db-admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="120.08">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="37" />
+          <folding>
+            <marker date="1469968960114" expanded="true" signature="2539:2652" placeholder="SELECT `empl..employees..." />
+            <marker date="1469968960114" expanded="true" signature="3198:3244" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="3303:3313" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="3361:3372" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="3414:3424" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="3469:3480" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="3575:3585" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="3632:3643" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="3710:3720" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="3773:3784" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="3973:3984" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="4104:4157" placeholder="DELETE FROM ..." />
+            <marker date="1469968960114" expanded="true" signature="4266:4277" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="4477:4590" placeholder="SELECT `empl..employees..." />
+            <marker date="1469968960114" expanded="true" signature="5056:6117" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="7140:7179" placeholder="UPDATE emplo..." />
+            <marker date="1469968960114" expanded="true" signature="7140:7385" placeholder="UPDATE emplo..." />
+            <marker date="1469968960114" expanded="true" signature="7448:7459" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="8843:8910" placeholder="SELECT * FRO..employees..." />
+            <marker date="1469968960114" expanded="true" signature="9157:9167" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="9157:9185" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="9391:9419" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="9557:9611" placeholder="SELECT * FRO..employees..." />
+            <marker date="1469968960114" expanded="true" signature="9797:9825" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="10023:10212" placeholder="INSERT INTO employees..." />
+            <marker date="1469968960114" expanded="true" signature="10278:10289" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="10440:10590" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="10440:11352" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="10440:11353" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="10440:11510" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="11749:11860" placeholder="SELECT `empl..employees..." />
+            <marker date="1469968960114" expanded="true" signature="11994:12106" placeholder="SELECT `empl..employees..." />
+            <marker date="1469968960114" expanded="true" signature="12215:12326" placeholder="SELECT `empl..employees..." />
+            <marker date="1469968960114" expanded="true" signature="12508:12614" placeholder="SELECT `empl..employees..." />
+            <marker date="1469968960114" expanded="true" signature="12748:12855" placeholder="SELECT `empl..employees..." />
+            <marker date="1469968960114" expanded="true" signature="12964:13070" placeholder="SELECT `empl..employees..." />
+            <marker date="1469968960114" expanded="true" signature="13250:13356" placeholder="SELECT `empl..employees..." />
+            <marker date="1469968960114" expanded="true" signature="13490:13597" placeholder="SELECT `empl..employees..." />
+            <marker date="1469968960114" expanded="true" signature="13706:13812" placeholder="SELECT `empl..employees..." />
+            <marker date="1469968960114" expanded="true" signature="13994:14096" placeholder="SELECT `empl..employees..." />
+            <marker date="1469968960114" expanded="true" signature="14230:14333" placeholder="SELECT `empl..employees..." />
+            <marker date="1469968960114" expanded="true" signature="14442:14544" placeholder="SELECT `empl..employees..." />
+            <marker date="1469968960114" expanded="true" signature="14659:14770" placeholder="SELECT `empl..employees..." />
+            <marker date="1469968960114" expanded="true" signature="14927:14953" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="14979:15010" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="15012:15023" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="15230:15241" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="15440:15450" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="15648:15659" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="15988:16045" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="16026:16037" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="16106:16117" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="16200:16210" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="16274:16285" placeholder="..." />
+            <marker date="1469968960114" expanded="true" signature="16951:16982" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beleptetorendszer/jelszo_generator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="11.4">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="71" />
+          <folding>
+            <marker date="1470045522000" expanded="true" signature="1982:2030" placeholder="SELECT * FRO..registration..." />
+            <marker date="1470045522000" expanded="true" signature="2587:2678" placeholder="INSERT INTO registration..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login_system/password_generator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55495495">
+          <caret line="42" column="55" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+          <folding>
+            <marker date="1470088858342" expanded="true" signature="1060:1102" placeholder="SELECT * FRO..registration..." />
+            <marker date="1470088858342" expanded="true" signature="1060:1104" placeholder="SELECT * FRO..registration..." />
+            <marker date="1470088858342" expanded="true" signature="1060:1111" placeholder="SELECT * FRO..registration..." />
+            <marker date="1470088858342" expanded="true" signature="1288:1383" placeholder="INSERT INTO registration..." />
+            <marker date="1470088858342" expanded="true" signature="1288:1650" placeholder="INSERT INTO registration..." />
           </folding>
         </state>
       </provider>
