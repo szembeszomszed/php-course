@@ -7,7 +7,6 @@ session_start();
 $Error = '';
 $successMessage = '';
 
-
 // a submit gombra ráellenőrzünk, hogy be van-e állítva
 if (isset($_POST['submit'])) {
     if (!($_POST['email'] == "" && $_POST['password'] == "")) { // megnézzük, hogy mindkét mező ki van-e töltve (nincs-e nemkitöltve:)

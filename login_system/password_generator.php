@@ -41,10 +41,28 @@ if (isset($_POST['submit'])) {
                         if($query) {
                             $to = $email;
                             $subject = "Your password";
+
+                            $message = "Hello $name!"
+                                . "Az ön jelszava elkészült."
+                                . "A belépéshez használható email-cím: $email"
+                                . "Az ön jelszava: $password."
+                                . "Most már beléphet az oldalra."
+                                . "Üdvözlettel: Karcsi"
+                                . "Az ön beleegyezése nélkül nem küldünk ki több emailt önnek";
                         }
+                    } else {
+                        $emailError = "The email address is already registered.";
                     }
+                } else {
+                    $emailError = "The email format is not correct.";
                 }
+            } else {
+                $emailError = "Providing email address is mandatory.";
             }
+        } else {
+            $nameError = "Only letters and space characters are allowed.";
         }
+    } else {
+        $nameError = "Providing your name is mandatory.";
     }
 }
