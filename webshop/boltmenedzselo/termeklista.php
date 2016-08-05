@@ -150,7 +150,7 @@ $termek_lista = "";
 
 // sorba rendezve kérdezzük le a termékeket
 // mégpedig a hozzáadás dátuma szerint csökkenő sorban
-$sql = mysqli_query($dblink, "SELECT * FROM products ORDER BY date_added DESC") or die(mysqli_error($dblink));
+$sql = mysqli_query($dblink, "SELECT * FROM products ORDER BY `id` DESC") or die(mysqli_error($dblink));
 
 // megszámoljuk a sorokat, mert lehet olyan eset is, amikor nulla lesz az eredmény
 // ami azt jelenti, hogy nincs termék feltöltve
@@ -172,7 +172,7 @@ if ($termekekSzama > 0) {
 
         // hozzáfűzzük a változónkhoz a termékeket az alábbi módon
         // a szerkesztés és töröl gombnál paraméterezünk is, hogy rögtön az adott termékre mutasson (id alapján)
-        $termek_lista .= "Termék ID: $id - <strong>$product_name</strong> - $price Ft - <em>Létrehozva: </em>$date_added | <a href='termekszerkesztes.php?pid=$id'>Szerkeszt</a> - <a href='termeklista.php?deleteid=$id'>Töröl</a><br/>";
+        $termek_lista .= "Termék ID: $id - <strong>$product_name</strong> - $price Ft - <em>Létrehozva: </em>$date_added | <a href='termekmutatas.php?pid=$id'>Mutat</a> - <a href='termekszerkesztes.php?pid=$id'>Szerkeszt</a> - <a href='termeklista.php?deleteid=$id'>Töröl</a><br/>";
     }
 } else {
     $termek_lista = "Nincs megjeleníthető termék";
@@ -191,6 +191,13 @@ if ($termekekSzama > 0) {
         <div align="center">
             <!-- header -->
             <?php include '../fejlec_sablon.php'; ?>
+            <div align="right">
+                <table width="20%">
+                    <tr>
+                        <td><a href="./index.php?logout">Kilépés</a></td>
+                    </tr>
+                </table>
+            </div>
             <!-- end of header -->
             <!-- content -->
             <div id="pageContent">
@@ -200,7 +207,7 @@ if ($termekekSzama > 0) {
                 </div> 
                 <div align="left">
                     <h2>Terméklista</h2>
-            <?php echo $termek_lista; ?>
+                    <?php echo $termek_lista; ?>
                 </div>
                 <hr/>
                 <a name="ujtermekform" id="ujtermekform"></a>

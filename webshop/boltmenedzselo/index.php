@@ -6,7 +6,7 @@ session_start();
 
 // ha a $_SESSION manager kulcsa nincs beállítva, már küldjük is vissza az loginoldalra
 if (!isset($_SESSION['manager'])) {
-    header('Location: menedzselo_login.php');
+    header('Location: http://localhost:8080/webshop/boltmenedzselo/menedzselo_login.php');
     exit();
 }
 
@@ -24,6 +24,12 @@ var_dump($managerID);
 var_dump($manager);
 var_dump($password);
 */
+
+if (isset($_GET['logout'])) {
+    unset($_SESSION['manager']);
+    header('Location: http://localhost:8080/webshop/boltmenedzselo/menedzselo_login.php');
+    exit();
+}
 
 // csatlakozás
 require '../boltszkriptek/kapcsolat_a_mysqlhez.php';
@@ -58,6 +64,13 @@ if ($letezikeszamolas == 0) {
          <div align="center">
             <!-- header -->
             <?php include '../fejlec_sablon.php';?>
+             <div align="right">
+                 <table width="20%">
+                     <tr>
+                        <td><a href="http://localhost:8080/webshop/boltmenedzselo/index.php?logout">Kilépés</a></td>
+                     </tr>
+                 </table>
+             </div>
             <!-- end of header -->
             <!-- content -->
             <div id="pageContent">
@@ -66,6 +79,7 @@ if ($letezikeszamolas == 0) {
                     <p>
                         <a href="termeklista.php">Termék kezelése</a>
                         <a href="">Oldalak kezelése</a>
+
                     </p>
                 </div>                       
             </div>

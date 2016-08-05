@@ -14,8 +14,8 @@
         </tr>
         <tr>
             <td width="30%">
-                <a href="http://localhost/webshop/index.php">Főoldal</a>
-                <a href="http://localhost/webshop/termekek.php">Termékek</a>
+                <a href="http://localhost:8080/webshop/boltmenedzselo/index.php">Főoldal</a>
+                <a href="http://localhost:8080/webshop/boltmenedzselo/termekek.php">Termékek</a>
                 <a href="#">Szabályzat</a>
                 <a href="#">Kapcsolat</a>
             </td>

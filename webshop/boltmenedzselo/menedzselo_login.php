@@ -43,7 +43,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         
     } else {
         // ha nem lépett be az if-ágba, akkor itt hibát íratunk ki
-        echo 'A megadott adatok helytelenek. Kérem, kattintson <a href="index.php">IDE</a>';
+        echo 'A megadott adatok helytelenek. Kérem, kattintson <a href="./menedzselo_login.php">IDE</a>';
         exit();
     }
 }

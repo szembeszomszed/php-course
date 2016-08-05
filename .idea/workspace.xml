@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="749a836f-8fc0-4d18-8819-4373d4756c51" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login_system/profile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login_system/profile_validation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login_system/session.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webshop/boltmenedzselo/termekmutatas.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webshop/termekkepek/3.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/beleptetorendszer/jelszo_validacio.php" afterPath="$PROJECT_DIR$/beleptetorendszer/jelszo_validacio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login_system/password_generator.php" afterPath="$PROJECT_DIR$/login_system/password_generator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webshop/boltmenedzselo/index.php" afterPath="$PROJECT_DIR$/webshop/boltmenedzselo/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webshop/boltmenedzselo/menedzselo_login.php" afterPath="$PROJECT_DIR$/webshop/boltmenedzselo/menedzselo_login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webshop/boltmenedzselo/termeklista.php" afterPath="$PROJECT_DIR$/webshop/boltmenedzselo/termeklista.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webshop/fejlec_sablon.php" afterPath="$PROJECT_DIR$/webshop/fejlec_sablon.php" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,13 +30,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/egyszeruCMS/admin/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-35.307693">
+              <caret line="51" column="83" selection-start-line="51" selection-start-column="83" selection-end-line="51" selection-end-column="83" />
+              <folding>
+                <marker date="1470208548000" expanded="true" signature="575:620" placeholder="DELETE FROM ..." />
+                <marker date="1470208548000" expanded="true" signature="2817:2854" placeholder="SELECT * FRO..pages..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eljarasok.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/egyszeruCMS/include/eljarasok.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+              <folding>
+                <marker date="1470208102000" expanded="true" signature="869:934" placeholder="SELECT * FRO..members..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="konfiguracio.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/egyszeruCMS/include/konfiguracio.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.769231">
+              <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="menedzselo_login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/menedzselo_login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.384615">
-              <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+            <state vertical-scroll-proportion="-12.461538">
+              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
               <folding>
-                <marker date="1470333280677" expanded="true" signature="966:1047" placeholder="SELECT id FR..admin..." />
+                <marker date="1470425175319" expanded="true" signature="966:1047" placeholder="SELECT id FR..admin..." />
               </folding>
             </state>
           </provider>
@@ -44,30 +80,74 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="7.769231">
-              <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+            <state vertical-scroll-proportion="-5.5384617">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="88" />
               <folding>
-                <marker date="1470337938448" expanded="true" signature="1027:1133" placeholder="SELECT * FRO..admin..." />
-                <marker date="1470337938448" expanded="true" signature="1381:1391" placeholder="..." />
+                <marker date="1470412186361" expanded="true" signature="1241:1347" placeholder="SELECT * FRO..admin..." />
+                <marker date="1470412186361" expanded="true" signature="1595:1605" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="termeklista.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fejlec_sablon.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webshop/fejlec_sablon.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.076923">
+              <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="termeklista.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/termeklista.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6101083">
-              <caret line="131" column="57" selection-start-line="131" selection-start-column="57" selection-end-line="131" selection-end-column="57" />
+            <state vertical-scroll-proportion="-64.88461">
+              <caret line="196" column="38" selection-start-line="196" selection-start-column="38" selection-end-line="196" selection-end-column="38" />
               <folding>
                 <element signature="e#1306#1402#0#PHP" expanded="true" />
                 <element signature="e#1723#1750#0#PHP" expanded="true" />
-                <marker date="1470344174155" expanded="true" signature="901:1007" placeholder="SELECT * FRO..admin..." />
-                <marker date="1470344174155" expanded="true" signature="1222:1232" placeholder="..." />
-                <marker date="1470344174155" expanded="true" signature="2544:2599" placeholder="DELETE FROM ..." />
-                <marker date="1470344174155" expanded="true" signature="3885:3950" placeholder="SELECT * FRO..products..." />
-                <marker date="1470344174155" expanded="true" signature="4476:4656" placeholder="INSERT INTO products..." />
-                <marker date="1470344174155" expanded="true" signature="5873:5920" placeholder="SELECT * FRO..products..." />
+                <element signature="e#3068#3090#0#PHP" expanded="true" />
+                <marker date="1470425158571" expanded="true" signature="901:1007" placeholder="SELECT * FRO..admin..." />
+                <marker date="1470425158571" expanded="true" signature="1222:1232" placeholder="..." />
+                <marker date="1470425158571" expanded="true" signature="2544:2599" placeholder="DELETE FROM ..." />
+                <marker date="1470425158571" expanded="true" signature="3885:3950" placeholder="SELECT * FRO..products..." />
+                <marker date="1470425158571" expanded="true" signature="4476:4656" placeholder="INSERT INTO products..." />
+                <marker date="1470425158571" expanded="true" signature="5873:5914" placeholder="SELECT * FRO..products..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="termekmutatas.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/termekmutatas.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.5920577">
+              <caret line="49" column="61" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
+              <folding>
+                <marker date="1470425860887" expanded="true" signature="438:492" placeholder="SELECT * FRO..products..." />
+                <marker date="1470425860887" expanded="true" signature="438:524" placeholder="SELECT * FRO..products..." />
+                <marker date="1470425860887" expanded="true" signature="903:922" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="923:1261" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="923:1736" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="944:1255" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="944:1261" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="1282:1380" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="1282:1736" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="1548:1572" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="1586:1600" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="1935:2127" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="1946:1969" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="1946:2032" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="2043:2063" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="2043:2127" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="2072:2127" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="2185:2390" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="2221:2371" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="2246:2283" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="2246:2346" placeholder="..." />
+                <marker date="1470425860887" expanded="true" signature="2456:2514" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -109,11 +189,13 @@
         <option value="$PROJECT_DIR$/egyszeruCMS/admin/index.php" />
         <option value="$PROJECT_DIR$/egyszeruCMS/admin/oldalhozzaadasa.php" />
         <option value="$PROJECT_DIR$/webshop/boltszkriptek/kapcsolat_a_mysqlhez.php" />
-        <option value="$PROJECT_DIR$/webshop/boltmenedzselo/menedzselo_login.php" />
-        <option value="$PROJECT_DIR$/webshop/boltmenedzselo/index.php" />
         <option value="$PROJECT_DIR$/webshop/boltszkriptek/termekek_tabla_letrehozasa.php" />
         <option value="$PROJECT_DIR$/webshop/boltszkriptek/admin_tabla_letrehozasa.php" />
+        <option value="$PROJECT_DIR$/webshop/boltmenedzselo/index.php" />
+        <option value="$PROJECT_DIR$/webshop/fejlec_sablon.php" />
         <option value="$PROJECT_DIR$/webshop/boltmenedzselo/termeklista.php" />
+        <option value="$PROJECT_DIR$/webshop/boltmenedzselo/menedzselo_login.php" />
+        <option value="$PROJECT_DIR$/webshop/boltmenedzselo/termekmutatas.php" />
       </list>
     </option>
   </component>
@@ -180,8 +262,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -391,7 +473,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15300146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15153733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -428,20 +510,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MySQL/mysql_insert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.88">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MySQL/mysql_update_0728.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.6">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MySQL/mysql_delete_0728.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -589,20 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beleptetorendszer/jelszo_validacio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.92432433">
-          <caret line="27" column="132" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/employees-db-admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93153155">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/egyszeruCMS/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -673,13 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beleptetorendszer/elfelejtett_jelszo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/beleptetorendszer/profil_validacio.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.032490976">
@@ -698,12 +745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7400722">
           <caret line="65" column="57" selection-start-line="65" selection-start-column="57" selection-end-line="65" selection-end-column="57" />
-          <folding>
-            <marker date="1470162780878" expanded="true" signature="1060:1102" placeholder="SELECT * FRO..registration..." />
-            <marker date="1470162780878" expanded="true" signature="1060:1104" placeholder="SELECT * FRO..registration..." />
-            <marker date="1470162780878" expanded="true" signature="1060:1111" placeholder="SELECT * FRO..registration..." />
-            <marker date="1470162780878" expanded="true" signature="1288:1383" placeholder="INSERT INTO registration..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -711,27 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6173285">
           <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding>
-            <marker date="1470212722000" expanded="true" signature="484:557" placeholder="INSERT INTO pages..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/egyszeruCMS/include/eljarasok.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93501806">
-          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <marker date="1470208102000" expanded="true" signature="869:934" placeholder="SELECT * FRO..members..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/egyszeruCMS/include/konfiguracio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31768954">
-          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -739,13 +759,67 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1299639">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webshop/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webshop/boltszkriptek/termekek_tabla_letrehozasa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19494584">
+          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webshop/boltszkriptek/admin_tabla_letrehozasa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32490975">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webshop/boltszkriptek/kapcsolat_a_mysqlhez.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45487365">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beleptetorendszer/jelszo_validacio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.87725633">
+          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+          <folding>
+            <marker date="1470048088000" expanded="true" signature="1187:1259" placeholder="SELECT * FRO..registration..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beleptetorendszer/elfelejtett_jelszo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/egyszeruCMS/include/eljarasok.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <marker date="1470208102000" expanded="true" signature="869:934" placeholder="SELECT * FRO..members..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/egyszeruCMS/admin/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93501806">
+        <state vertical-scroll-proportion="-35.307693">
           <caret line="51" column="83" selection-start-line="51" selection-start-column="83" selection-end-line="51" selection-end-column="83" />
           <folding>
             <marker date="1470208548000" expanded="true" signature="575:620" placeholder="DELETE FROM ..." />
@@ -754,76 +828,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webshop/index.php">
+    <entry file="file://$PROJECT_DIR$/egyszeruCMS/include/konfiguracio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.769231">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employees-db-admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39169675">
+          <caret line="85" column="41" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.5384617">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="88" />
+          <folding>
+            <marker date="1470412186361" expanded="true" signature="1241:1347" placeholder="SELECT * FRO..admin..." />
+            <marker date="1470412186361" expanded="true" signature="1595:1605" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webshop/fejlec_sablon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.076923">
+          <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/menedzselo_login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.384615">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+        <state vertical-scroll-proportion="-12.461538">
+          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
           <folding>
-            <marker date="1470333280677" expanded="true" signature="966:1047" placeholder="SELECT id FR..admin..." />
+            <marker date="1470425175319" expanded="true" signature="966:1047" placeholder="SELECT id FR..admin..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.769231">
-          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
-          <folding>
-            <marker date="1470337938448" expanded="true" signature="1027:1133" placeholder="SELECT * FRO..admin..." />
-            <marker date="1470337938448" expanded="true" signature="1381:1391" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webshop/boltszkriptek/termekek_tabla_letrehozasa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19494584">
-          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
-          <folding>
-            <marker date="1470339296285" expanded="true" signature="76:467" placeholder="CREATE TABLE..products..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webshop/boltszkriptek/admin_tabla_letrehozasa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32490975">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-          <folding>
-            <marker date="1470339424903" expanded="true" signature="146:413" placeholder="CREATE TABLE..admin..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webshop/boltszkriptek/kapcsolat_a_mysqlhez.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45487365">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/termeklista.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6101083">
-          <caret line="131" column="57" selection-start-line="131" selection-start-column="57" selection-end-line="131" selection-end-column="57" />
+        <state vertical-scroll-proportion="-64.88461">
+          <caret line="196" column="38" selection-start-line="196" selection-start-column="38" selection-end-line="196" selection-end-column="38" />
           <folding>
             <element signature="e#1306#1402#0#PHP" expanded="true" />
             <element signature="e#1723#1750#0#PHP" expanded="true" />
-            <marker date="1470344174155" expanded="true" signature="901:1007" placeholder="SELECT * FRO..admin..." />
-            <marker date="1470344174155" expanded="true" signature="1222:1232" placeholder="..." />
-            <marker date="1470344174155" expanded="true" signature="2544:2599" placeholder="DELETE FROM ..." />
-            <marker date="1470344174155" expanded="true" signature="3885:3950" placeholder="SELECT * FRO..products..." />
-            <marker date="1470344174155" expanded="true" signature="4476:4656" placeholder="INSERT INTO products..." />
-            <marker date="1470344174155" expanded="true" signature="5873:5920" placeholder="SELECT * FRO..products..." />
+            <element signature="e#3068#3090#0#PHP" expanded="true" />
+            <marker date="1470425158571" expanded="true" signature="901:1007" placeholder="SELECT * FRO..admin..." />
+            <marker date="1470425158571" expanded="true" signature="1222:1232" placeholder="..." />
+            <marker date="1470425158571" expanded="true" signature="2544:2599" placeholder="DELETE FROM ..." />
+            <marker date="1470425158571" expanded="true" signature="3885:3950" placeholder="SELECT * FRO..products..." />
+            <marker date="1470425158571" expanded="true" signature="4476:4656" placeholder="INSERT INTO products..." />
+            <marker date="1470425158571" expanded="true" signature="5873:5914" placeholder="SELECT * FRO..products..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/termekmutatas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5920577">
+          <caret line="49" column="61" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
+          <folding>
+            <marker date="1470425860887" expanded="true" signature="438:492" placeholder="SELECT * FRO..products..." />
+            <marker date="1470425860887" expanded="true" signature="438:524" placeholder="SELECT * FRO..products..." />
+            <marker date="1470425860887" expanded="true" signature="903:922" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="923:1261" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="923:1736" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="944:1255" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="944:1261" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="1282:1380" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="1282:1736" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="1548:1572" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="1586:1600" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="1935:2127" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="1946:1969" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="1946:2032" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="2043:2063" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="2043:2127" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="2072:2127" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="2185:2390" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="2221:2371" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="2246:2283" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="2246:2346" placeholder="..." />
+            <marker date="1470425860887" expanded="true" signature="2456:2514" placeholder="..." />
           </folding>
         </state>
       </provider>
