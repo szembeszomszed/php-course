@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$output = "";
 
 if (!isset($_SESSION['manager'])) {
     header('Location: http://localhost:8080/webshop/boltmenedzselo/menedzselo_login.php');
@@ -61,7 +62,7 @@ if (filter_input(INPUT_GET, 'pid')) {
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Terméklista - Admin</title>
+        <title>Termék - <?php echo $productName; ?></title>
     </head>
     <body>
         <div align="center">
