@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="749a836f-8fc0-4d18-8819-4373d4756c51" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webshop/boltmenedzselo/termekmutatas.php" afterPath="$PROJECT_DIR$/webshop/boltmenedzselo/termekmutatas.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webshop/index.php" afterPath="$PROJECT_DIR$/webshop/index.php" />
     </list>
     <ignored path="htdocs.iws" />
@@ -29,43 +28,33 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webshop/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19494584">
-              <caret line="9" column="92" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
+            <state vertical-scroll-proportion="0.16245487">
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
               <folding>
-                <marker date="1470505367853" expanded="true" signature="88:138" placeholder="SELECT `prod..products..." />
-                <marker date="1470505367853" expanded="true" signature="88:166" placeholder="SELECT `prod..products..." />
-                <marker date="1470505367853" expanded="true" signature="338:357" placeholder="..." />
-                <marker date="1470505367853" expanded="true" signature="715:739" placeholder="..." />
-                <marker date="1470505367853" expanded="true" signature="753:767" placeholder="..." />
-                <marker date="1470505367853" expanded="true" signature="1159:1202" placeholder="SELECT * FRO..product..." />
-                <marker date="1470505367853" expanded="true" signature="1640:1659" placeholder="..." />
-                <marker date="1470505367853" expanded="true" signature="2131:2155" placeholder="..." />
-                <marker date="1470505367853" expanded="true" signature="2169:2183" placeholder="..." />
-                <marker date="1470505367853" expanded="true" signature="2380:2550" placeholder="..." />
-                <marker date="1470505367853" expanded="true" signature="2559:2715" placeholder="..." />
-                <marker date="1470505367853" expanded="true" signature="2570:2637" placeholder="..." />
-                <marker date="1470505367853" expanded="true" signature="2648:2707" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="employees-db-admin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/employees-db-admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-35.76923">
-              <caret line="85" column="41" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="41" />
-              <folding>
-                <marker date="1469968960114" expanded="true" signature="3198:3244" placeholder="..." />
-                <marker date="1469968960114" expanded="true" signature="3303:3313" placeholder="..." />
-                <marker date="1469968960114" expanded="true" signature="3361:3372" placeholder="..." />
-                <marker date="1469968960114" expanded="true" signature="3414:3424" placeholder="..." />
-                <marker date="1469968960114" expanded="true" signature="3469:3480" placeholder="..." />
-                <marker date="1469968960114" expanded="true" signature="3575:3585" placeholder="..." />
-                <marker date="1469968960114" expanded="true" signature="3632:3643" placeholder="..." />
-                <marker date="1469968960114" expanded="true" signature="3710:3720" placeholder="..." />
-                <marker date="1469968960114" expanded="true" signature="3773:3784" placeholder="..." />
-                <marker date="1469968960114" expanded="true" signature="3973:3984" placeholder="..." />
+                <marker date="1470576445056" expanded="true" signature="88:2009" placeholder="..." />
+                <marker date="1470576445056" expanded="true" signature="178:2009" placeholder="..." />
+                <marker date="1470576445056" expanded="true" signature="753:831" placeholder="SELECT `id`,..products..." />
+                <marker date="1470576445056" expanded="true" signature="945:1024" placeholder="SELECT `id`,..products..." />
+                <marker date="1470576445056" expanded="true" signature="1138:1209" placeholder="SELECT `id`,..products..." />
+                <marker date="1470576445056" expanded="true" signature="1323:1395" placeholder="SELECT `id`,..products..." />
+                <marker date="1470576445056" expanded="true" signature="1508:1586" placeholder="SELECT `id`,..products..." />
+                <marker date="1470576445056" expanded="true" signature="1669:1747" placeholder="SELECT `id`,..products..." />
+                <marker date="1470576445056" expanded="true" signature="1783:1814" placeholder="..." />
+                <marker date="1470576445056" expanded="true" signature="1817:1867" placeholder="SELECT `prod..products..." />
+                <marker date="1470576445056" expanded="true" signature="1817:1895" placeholder="SELECT `prod..products..." />
+                <marker date="1470576445056" expanded="true" signature="2068:2087" placeholder="..." />
+                <marker date="1470576445056" expanded="true" signature="2445:2469" placeholder="..." />
+                <marker date="1470576445056" expanded="true" signature="2483:2497" placeholder="..." />
+                <marker date="1470576445056" expanded="true" signature="2889:2932" placeholder="SELECT * FRO..product..." />
+                <marker date="1470576445056" expanded="true" signature="3370:3389" placeholder="..." />
+                <marker date="1470576445056" expanded="true" signature="3861:3885" placeholder="..." />
+                <marker date="1470576445056" expanded="true" signature="3899:3913" placeholder="..." />
+                <marker date="1470576445056" expanded="true" signature="4110:4280" placeholder="..." />
+                <marker date="1470576445056" expanded="true" signature="4289:4692" placeholder="..." />
+                <marker date="1470576445056" expanded="true" signature="4300:4521" placeholder="..." />
+                <marker date="1470576445056" expanded="true" signature="4300:4614" placeholder="..." />
+                <marker date="1470576445056" expanded="true" signature="4369:4519" placeholder="..." />
+                <marker date="1470576445056" expanded="true" signature="4625:4684" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -74,8 +63,8 @@
       <file leaf-file-name="termeklista.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/termeklista.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-33.923077">
-              <caret line="196" column="38" selection-start-line="196" selection-start-column="38" selection-end-line="196" selection-end-column="38" />
+            <state vertical-scroll-proportion="-30.461538">
+              <caret line="254" column="27" selection-start-line="254" selection-start-column="27" selection-end-line="254" selection-end-column="40" />
               <folding>
                 <element signature="e#1306#1402#0#PHP" expanded="true" />
                 <element signature="e#1723#1750#0#PHP" expanded="true" />
@@ -91,22 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mysql_fetch_array_while_0728.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MySQL/mysql_fetch_array_while_0728.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1469692324000" expanded="true" signature="257:276" placeholder="SELECT * FRO..pelda..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="termekmutatas.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/termekmutatas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3846154">
+            <state vertical-scroll-proportion="6.3846154">
               <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="50" selection-end-column="61" />
               <folding>
                 <marker date="1470426575971" expanded="true" signature="452:506" placeholder="SELECT * FRO..products..." />
@@ -236,7 +213,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -311,12 +287,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MySQL" />
+              <option name="myItemId" value="webshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boltmenedzselo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -392,7 +373,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15080526" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1500732" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -503,20 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/regisztracio_0721.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.032702237">
-          <caret line="115" column="65" selection-start-line="115" selection-start-column="65" selection-end-line="115" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/urlapelemek-gyakorlas_0720.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.084337346">
-          <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -692,9 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.87725633">
           <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-          <folding>
-            <marker date="1470048088000" expanded="true" signature="1187:1259" placeholder="SELECT * FRO..registration..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -705,22 +669,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.032490976">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="88" />
-          <folding>
-            <marker date="1470412186361" expanded="true" signature="1241:1347" placeholder="SELECT * FRO..admin..." />
-            <marker date="1470412186361" expanded="true" signature="1595:1605" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webshop/fejlec_sablon.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44765344">
           <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31768954">
           <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,9 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.032490976">
           <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <marker date="1470208102000" expanded="true" signature="869:934" placeholder="SELECT * FRO..members..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -756,30 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.032490976">
           <caret line="51" column="83" selection-start-line="51" selection-start-column="83" selection-end-line="51" selection-end-column="83" />
-          <folding>
-            <marker date="1470208548000" expanded="true" signature="575:620" placeholder="DELETE FROM ..." />
-            <marker date="1470208548000" expanded="true" signature="2817:2854" placeholder="SELECT * FRO..pages..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/termekmutatas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3846154">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="50" selection-end-column="61" />
-          <folding>
-            <marker date="1470426575971" expanded="true" signature="452:506" placeholder="SELECT * FRO..products..." />
-            <marker date="1470426575971" expanded="true" signature="452:538" placeholder="SELECT * FRO..products..." />
-            <marker date="1470426575971" expanded="true" signature="917:936" placeholder="..." />
-            <marker date="1470426575971" expanded="true" signature="937:1275" placeholder="..." />
-            <marker date="1470426575971" expanded="true" signature="937:1750" placeholder="..." />
-            <marker date="1470426575971" expanded="true" signature="958:1269" placeholder="..." />
-            <marker date="1470426575971" expanded="true" signature="958:1275" placeholder="..." />
-            <marker date="1470426575971" expanded="true" signature="1296:1394" placeholder="..." />
-            <marker date="1470426575971" expanded="true" signature="1296:1750" placeholder="..." />
-            <marker date="1470426575971" expanded="true" signature="1562:1586" placeholder="..." />
-            <marker date="1470426575971" expanded="true" signature="1600:1614" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -806,16 +730,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MySQL/mysql_fetch_array_while_0728.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2599278">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="88" />
           <folding>
-            <marker date="1469690794000" expanded="true" signature="260:279" placeholder="SELECT * FRO..pelda..." />
+            <marker date="1470412186361" expanded="true" signature="1241:1347" placeholder="SELECT * FRO..admin..." />
+            <marker date="1470412186361" expanded="true" signature="1595:1605" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/termekmutatas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.3846154">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="50" selection-end-column="61" />
+          <folding>
+            <marker date="1470426575971" expanded="true" signature="452:506" placeholder="SELECT * FRO..products..." />
+            <marker date="1470426575971" expanded="true" signature="452:538" placeholder="SELECT * FRO..products..." />
+            <marker date="1470426575971" expanded="true" signature="917:936" placeholder="..." />
+            <marker date="1470426575971" expanded="true" signature="937:1275" placeholder="..." />
+            <marker date="1470426575971" expanded="true" signature="937:1750" placeholder="..." />
+            <marker date="1470426575971" expanded="true" signature="958:1269" placeholder="..." />
+            <marker date="1470426575971" expanded="true" signature="958:1275" placeholder="..." />
+            <marker date="1470426575971" expanded="true" signature="1296:1394" placeholder="..." />
+            <marker date="1470426575971" expanded="true" signature="1296:1750" placeholder="..." />
+            <marker date="1470426575971" expanded="true" signature="1562:1586" placeholder="..." />
+            <marker date="1470426575971" expanded="true" signature="1600:1614" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/regisztracio_0721.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.230769">
+          <caret line="115" column="65" selection-start-line="115" selection-start-column="65" selection-end-line="115" selection-end-column="65" />
+          <folding>
+            <marker date="1469186981239" expanded="true" signature="520:531" placeholder="..." />
+            <marker date="1469186981239" expanded="true" signature="1055:1066" placeholder="..." />
+            <marker date="1469186981239" expanded="true" signature="1369:1380" placeholder="..." />
+            <marker date="1469186981239" expanded="true" signature="1491:1502" placeholder="..." />
+            <marker date="1469186981239" expanded="true" signature="2132:2143" placeholder="..." />
+            <marker date="1469186981239" expanded="false" signature="2555:2581" placeholder="..." />
+            <marker date="1469186981239" expanded="true" signature="2582:3214" placeholder="..." />
+            <marker date="1469186981239" expanded="true" signature="2610:2869" placeholder="..." />
+            <marker date="1469186981239" expanded="true" signature="2639:2840" placeholder="..." />
+            <marker date="1469186981239" expanded="true" signature="2897:3190" placeholder="..." />
+            <marker date="1469186981239" expanded="true" signature="2926:3161" placeholder="..." />
+            <marker date="1469186981239" expanded="true" signature="3434:3459" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urlapelemek-gyakorlas_0720.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.0866425">
+          <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webshop/boltmenedzselo/termeklista.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-33.923077">
-          <caret line="196" column="38" selection-start-line="196" selection-start-column="38" selection-end-line="196" selection-end-column="38" />
+        <state vertical-scroll-proportion="-30.461538">
+          <caret line="254" column="27" selection-start-line="254" selection-start-column="27" selection-end-line="254" selection-end-column="40" />
           <folding>
             <element signature="e#1306#1402#0#PHP" expanded="true" />
             <element signature="e#1723#1750#0#PHP" expanded="true" />
@@ -830,34 +818,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MySQL/mysql_fetch_array_while_0728.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1469692324000" expanded="true" signature="257:276" placeholder="SELECT * FRO..pelda..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webshop/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19494584">
-          <caret line="9" column="92" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
+        <state vertical-scroll-proportion="0.16245487">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
           <folding>
-            <marker date="1470505367853" expanded="true" signature="88:138" placeholder="SELECT `prod..products..." />
-            <marker date="1470505367853" expanded="true" signature="88:166" placeholder="SELECT `prod..products..." />
-            <marker date="1470505367853" expanded="true" signature="338:357" placeholder="..." />
-            <marker date="1470505367853" expanded="true" signature="715:739" placeholder="..." />
-            <marker date="1470505367853" expanded="true" signature="753:767" placeholder="..." />
-            <marker date="1470505367853" expanded="true" signature="1159:1202" placeholder="SELECT * FRO..product..." />
-            <marker date="1470505367853" expanded="true" signature="1640:1659" placeholder="..." />
-            <marker date="1470505367853" expanded="true" signature="2131:2155" placeholder="..." />
-            <marker date="1470505367853" expanded="true" signature="2169:2183" placeholder="..." />
-            <marker date="1470505367853" expanded="true" signature="2380:2550" placeholder="..." />
-            <marker date="1470505367853" expanded="true" signature="2559:2715" placeholder="..." />
-            <marker date="1470505367853" expanded="true" signature="2570:2637" placeholder="..." />
-            <marker date="1470505367853" expanded="true" signature="2648:2707" placeholder="..." />
+            <marker date="1470576445056" expanded="true" signature="88:2009" placeholder="..." />
+            <marker date="1470576445056" expanded="true" signature="178:2009" placeholder="..." />
+            <marker date="1470576445056" expanded="true" signature="753:831" placeholder="SELECT `id`,..products..." />
+            <marker date="1470576445056" expanded="true" signature="945:1024" placeholder="SELECT `id`,..products..." />
+            <marker date="1470576445056" expanded="true" signature="1138:1209" placeholder="SELECT `id`,..products..." />
+            <marker date="1470576445056" expanded="true" signature="1323:1395" placeholder="SELECT `id`,..products..." />
+            <marker date="1470576445056" expanded="true" signature="1508:1586" placeholder="SELECT `id`,..products..." />
+            <marker date="1470576445056" expanded="true" signature="1669:1747" placeholder="SELECT `id`,..products..." />
+            <marker date="1470576445056" expanded="true" signature="1783:1814" placeholder="..." />
+            <marker date="1470576445056" expanded="true" signature="1817:1867" placeholder="SELECT `prod..products..." />
+            <marker date="1470576445056" expanded="true" signature="1817:1895" placeholder="SELECT `prod..products..." />
+            <marker date="1470576445056" expanded="true" signature="2068:2087" placeholder="..." />
+            <marker date="1470576445056" expanded="true" signature="2445:2469" placeholder="..." />
+            <marker date="1470576445056" expanded="true" signature="2483:2497" placeholder="..." />
+            <marker date="1470576445056" expanded="true" signature="2889:2932" placeholder="SELECT * FRO..product..." />
+            <marker date="1470576445056" expanded="true" signature="3370:3389" placeholder="..." />
+            <marker date="1470576445056" expanded="true" signature="3861:3885" placeholder="..." />
+            <marker date="1470576445056" expanded="true" signature="3899:3913" placeholder="..." />
+            <marker date="1470576445056" expanded="true" signature="4110:4280" placeholder="..." />
+            <marker date="1470576445056" expanded="true" signature="4289:4692" placeholder="..." />
+            <marker date="1470576445056" expanded="true" signature="4300:4521" placeholder="..." />
+            <marker date="1470576445056" expanded="true" signature="4300:4614" placeholder="..." />
+            <marker date="1470576445056" expanded="true" signature="4369:4519" placeholder="..." />
+            <marker date="1470576445056" expanded="true" signature="4625:4684" placeholder="..." />
           </folding>
         </state>
       </provider>
