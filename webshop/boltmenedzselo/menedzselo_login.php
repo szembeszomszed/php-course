@@ -5,7 +5,7 @@ session_start();
 // ellenőrizzük le, hogy a menedzser benne van-e a munkamenetben
 // ha igen, akkor rögtön átdobjuk az adminoldalra
 if (isset($_SESSION['manager'])) {
-    header('Location: index.php');
+    header('Location: index_sajat.php');
     exit();
 }
 
@@ -38,7 +38,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $_SESSION['password'] = $password;
 
         // beállítás után átdobjuk az adminoldalra
-        header('Location: index.php');
+        header('Location: index_sajat.php');
         exit();
         
     } else {

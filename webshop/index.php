@@ -1,108 +1,67 @@
 <?php
 
+/* ÉN MEGOLDÁSOM
 require 'boltszkriptek/kapcsolat_a_mysqlhez.php';
+$sql = mysql_query("SELECT * FROM products ORDER BY date_added ASC LIMIT 3") or die(mysql_error());
 
-$output = '<form method="post">'
-    //.'<label for="order">Rendezés</label><br/>'
-    .'<select name="order" id="order">'
-    .'<option value="0">---Válasszon rendezési módot---</option>'
-    .'<option value="1">Név szerint növekvő</option>'
-    .'<option value="2">Név szerint csökkenő</option>'
-    .'<option value="3">Ár szerint növekvő</option>'
-    .'<option value="4">Ár szerint csökkenő</option>'
-    .'</select>'
-    .'<input type="submit" name="submit" value="Rendez">'
-    .'</form>'
-    .'<br/>';
-
-if(filter_input(INPUT_POST, 'submit')) {
-    $orderMethod = filter_input(INPUT_POST, 'order');
-
-    switch ($orderMethod) {
-        case '1' :
-            $sql = mysqli_query($dblink, "SELECT `id`, `product_name`, `price` from products ORDER BY `product_name` ASC") or die(mysqli_error($dblink));
-            break;
-        case '2' :
-            $sql = mysqli_query($dblink, "SELECT `id`, `product_name`, `price` from products ORDER BY `product_name` DESC") or die(mysqli_error($dblink));
-            break;
-        case '3' :
-            $sql = mysqli_query($dblink, "SELECT `id`, `product_name`, `price` from products ORDER BY `price` ASC") or die(mysqli_error($dblink));
-            break;
-        case '4' :
-            $sql = mysqli_query($dblink, "SELECT `id`, `product_name`, `price` from products ORDER BY `price` DESC") or die(mysqli_error($dblink));
-            break;
-        default :
-            $sql = mysqli_query($dblink, "SELECT `id`, `product_name`, `price` from products ORDER BY `product_name` ASC") or die(mysqli_error($dblink));
-    }
-} else {
-    $sql = mysqli_query($dblink, "SELECT `id`, `product_name`, `price` from products ORDER BY `product_name` ASC") or die(mysqli_error($dblink));
-}
-
-
-//$sql = mysqli_query($dblink, "SELECT `id`, `product_name`, `price` from products ORDER BY `product_name` ASC") or die(mysqli_error($dblink));
-
-$numberOfRows = mysqli_num_rows($sql);
+$numberOfRows = mysql_num_rows($sql);
 
 if ($numberOfRows > 0) {
-    $output .= '<table border="1" cellspacing="0" cellpadding="0" style="text-align: center;">'
-        . '<tr>'
-        . '<th>Termék neve</th>'
-        . '<th>Termék ára</th>'
-        . '<th>Fotó</th>'
-        . '<th>Művelet</th>'
-        . '</tr>';
-    while ($row = mysqli_fetch_assoc($sql)) {
-        $output .= '<tr>'
-            . '<td>'. $row["product_name"]. '</td>'
-            . '<td>'. $row["price"]. ' Ft</td>'
-            . '<td style="width:50px; height:50px;"><img style="display:block;" width="100%" height="100%" src="termekkepek/'.$row["id"].'.jpg"/></td>'
-            . '<td><a href="index.php?show='.$row["id"].'">Mutat</a></td>'
+    $dinamikusLista = '<table border="1" style="border-collapse:collapse;">'
+            . '<tr>'
+            . '<th>Termék neve</th>'
+            . '<th>Termék ára</th>'
+            . '<th height="50" width="50">Fotó</th>'
             . '</tr>';
+    
+    while ($row = mysql_fetch_assoc($sql)) {
+        $dinamikusLista .= '<tr>'
+                . '<td><a href="#">'.$row["product_name"].'</a></td>'
+                . '<td>'.$row["price"].' Ft</td>'
+                . '<td height="50" width="50"><img style="display:block;" width="100%" height="100%" src="./termekkepek/'.$row["id"].'.jpg"/></td>'
+                . '</tr>';
+        
     }
-    $output .= '</table>';
+    $dinamikusLista .= '</table>';
 } else {
-    $output = "<p>Nincs megjeleníthető termék.</p>";
+    $dinamikusLista = "Nincs megjeleníthető termék";
 }
+ * 
+ * 
+ */
 
+// KÖZÖS MEGOLDÁS
 
-if (filter_input(INPUT_GET, 'show')) {
-    $showId = filter_input(INPUT_GET, 'show');
-
-    $sql = mysqli_query($dblink, "SELECT * FROM products WHERE `id`='$showId'") or die(mysqli_error($dblink));
-    $result = mysqli_fetch_assoc($sql);
-
-    $productId = $result['id'];
-    $productName = $result['product_name'];
-    $price = $result['price'];
-    $details = $result['details'];
-    $category = $result['category'];
-    $subcategory = $result['subcategory'];
-    //$dateAdded = $result['date_added']; NOT REQUIRED IN USER VIEW
-
-    $output = '<table border="1" cellspacing="0" cellpadding="0" style="text-align: center;">'
-        . '<tr>'
-        . '<th>Termék neve</th>'
-        . '<th>Termék ára</th>'
-        . '<th>Kategória</th>'
-        . '<th>Alkategória</th>'
-        . '<th>Termékadatok</th>'
-        . '<th>Termékkép</th>'
-        . '</tr>'
-        . '<tr>'
-        . '<td>' . $productName . '</td>'
-        . '<td>' . $price . ' Ft</td>'
-        . '<td>' . $category . '</td>'
-        . '<td>' . $subcategory . '</td>'
-        . '<td>' . $details . '</td>'
-        . '<td style="width:50px; height:50px;"><img style="display:block;" width="100%" height="100%" src="termekkepek/' . $productId . '.jpg"/></td>'
-        . '</tr>'
-        . '</table>'
-        . '<br/> <a href="index.php">Vissza</a>';
-}
-
-
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 ?>
 
+<?php
+
+include 'boltszkriptek/kapcsolat_a_mysqlhez.php';
+$dinamikusLista = "";
+$sql = mysql_query("SELECT * FROM products ORDER BY date_added DESC LIMIT 6");
+$megszamolom_a_sorokat = mysql_num_rows($sql);
+if ($megszamolom_a_sorokat > 0) {
+    while ($row = mysql_fetch_array($sql)) {
+        $id = $row['id'];
+        $product_name = $row['product_name'];
+        $price = $row['price'];
+        $date_added = strftime('%Y %b %d', strtotime($row['date_added']));
+        
+        // itt most gyakorlatilag külön táblázatot hozunk létre mindegyik terméknek
+        $dinamikusLista .= '<table width="100%" cellspacing="0">'
+                . '<tr>'
+                . '<td width="20%" valign="top"><a href="termek.php?id='.$id.'">'
+                . '<img src="termekkepek/'.$id.'.jpg" alt="'.$product_name.'" width="80" height="100"></a></td>'
+                . '<td width="80%" valign="top">'.$product_name.'<br/>'.$price.' Ft<br/>'
+                . '<a href="termek.php?id='.$id.'">Termékadatok megtekintése</a></td></tr></table>';
+    }
+} else {
+    $dinamikusLista = "Nincs megjeleníthető termék";
+}
+
+?>
 
 
 <!DOCTYPE html>
@@ -114,17 +73,39 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
-        <!--
-        keep selected value in drop-down after submission - not yet working
-        <script type="text/javascript">
-            document.getElementById('order').value = "<?php// echo $_POST['order'];?>";
-        </script>
-        -->
+        <title>Webshop Főoldal</title>
     </head>
     <body>
-        <?php
-        echo $output;
-        ?>
+        <div align="center">
+            <?php include './fejlec_sablon.php'; ?>
+            <!-- content -->
+            <div id="pageContent">
+                <table width="100%" cellspacing="0" cellpadding="5">
+                    <tr>
+                        <td width="32%" valign="top">
+                            <h3>Lorem Ipsum</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                            <p>
+                                Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. 
+                            </p>
+                            <p>
+                                Fusce convallis, mauris imperdiet gravida bibendum, nisl turpis suscipit mauris, sed placerat ipsum urna sed risus. In convallis tellus a mauris. Curabitur non elit ut libero tristique sodales. Mauris a lacus. Donec mattis semper leo. In hac habitasse platea dictumst. Vivamus facilisis diam at odio. Mauris dictum, nisi eget consequat elementum, lacus ligula molestie metus, non feugiat orci magna ac sem. 
+                            </p>                            
+                        </td>
+                        <td width="35%" valign="top">
+                            <h3>Funce convallis, mauris</h3>
+                            <p><?php echo $dinamikusLista; ?><br/></p>
+                        </td>
+                        <td width="33%" valign="top">
+                            <p>Curabitur non elit ut libero tristique sodales. Mauris a lacus. Donec mattis semper leo.</p>   
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- end of content -->
+            <?php include './lablec_sablon.php'; ?>
+        </div>
     </body>
 </html>
