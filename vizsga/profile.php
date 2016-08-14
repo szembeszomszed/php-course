@@ -18,19 +18,11 @@ if (filter_input(INPUT_GET, 'pid')) {
 switch ($action) {
         
     case 'new' :
-        
-        $output = $output = '<a href="profile.php">Back to product list</a><br/><br/>'
-            . '<h2>Add New Product</h2>'
-            . '<form method="post">'
-            . '<label for="pname">Product Name</label><br/>'
-            . '<input type="text" name="pname"><br/><br/>'
-            . '<label for="price">Price</label><br/>'
-            . '<input type="text" name="price"><br/><br/>'
-            . '<label for="details">Details</label><br/>'
-            . '<textarea name="details"></textarea><br/><br/>'
-            . '<input type="submit" name="submit" value="Add">'
-            . '</form>';
-        
+
+        $productName = "";
+        $price = "";
+        $details = "";
+
         if (filter_input(INPUT_POST, 'submit')) {
             
             if (!empty(filter_input(INPUT_POST, 'pname')) && !empty(filter_input(INPUT_POST, 'price')) && !empty(filter_input(INPUT_POST, 'details'))) {
@@ -56,7 +48,19 @@ switch ($action) {
                 echo "<p style=\"color: red;\">All fields are mandatory!</p>";
             }  
         }
-        
+
+        $output = '<a href="profile.php">Back to product list</a><br/><br/>'
+            . '<h2>Add New Product</h2>'
+            . '<form method="post">'
+            . '<label for="pname">Product Name</label><br/>'
+            . '<input type="text" name="pname" value="'.$productName.'"><br/><br/>'
+            . '<label for="price">Price</label><br/>'
+            . '<input type="text" name="price" value="'.$price.'"><br/><br/>'
+            . '<label for="details">Details</label><br/>'
+            . '<textarea name="details">'.$details.'</textarea><br/><br/>'
+            . '<input type="submit" name="submit" value="Add">'
+            . '</form>';
+
         break;
     case 'mod' :
         
