@@ -1,5 +1,5 @@
 <?php
-require 'login-validation.php';
+require 'scripts/login-validation.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,14 +12,12 @@ require 'login-validation.php';
 <h2>Welcome to the Login Page</h2>
 <form method="post">
     <label for="username">Username</label><br/>
-    <input type="text" name="username"><br/><br/>
+    <input type="text" name="username" value="<?php echo (filter_input(INPUT_POST, 'username') ? $username : "");?>"><br/><br/>
     <label for="password">Password</label><br/>
     <input type="password" name="password"><br/><br/>
-    <input type="submit" name="submit" value="Sign in"><br/><br/>
+    <input type="submit" name="submit" value="Sign in"><?php echo (!empty($error) ? $error['login'] : ""); ?><br/><br/>
     <a href="forgotten-password.php">Forgotten password</a><br/><br/>
     <a href="signup-page.php"><strong>New user?</strong> Click to sign up</a>
-
-
 </form>
 </body>
 </html>
