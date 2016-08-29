@@ -13,6 +13,7 @@ $loggedInUser = $_SESSION['username'];
     <title>Index - <?php echo $loggedInUser;?></title>
 </head>
 <body>
-<a href="logout.php" style="margin-left: 95%; top: 0%;">Logout</a>
+<a href="logout.php" style="margin-left: 96%; top: 0%;">Logout</a>
+<p style="margin-left: 90%; top: 0%;">logged in as <strong><?php echo $loggedInUser;?></strong></p>
 </body>
 </html>
