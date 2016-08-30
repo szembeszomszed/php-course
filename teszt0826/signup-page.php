@@ -1,4 +1,5 @@
 <?php
+require 'scripts/signup-validation.php';
 ?>
 
 <!DOCTYPE html>
