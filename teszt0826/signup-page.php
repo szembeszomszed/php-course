@@ -24,12 +24,12 @@ require 'scripts/signup-validation.php';
     <label for="age">Age</label><br/>
     <input type="text" name="age" size="3"><br/><br/>
     <select name="location">
-        <option value="0">---select your location---</option>
-        <option value="1">Africa</option>
-        <option value="2">Americas</option>
-        <option value="3">Asia</option>
-        <option value="4">Australia</option>
-        <option value="5">Europe</option>
+        <option value="default">---select your location---</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Asia">Asia</option>
+        <option value="Australia">Australia</option>
+        <option value="Europe">Europe</option>
     </select>
     <br/><br/>
 
