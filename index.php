@@ -16,9 +16,40 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<style>
+	.container {
+		
+	}
+	
+	.col-xs-12 {
+		
+	}
+	
+	.row {
+		
+	}
+	</style>
+	
   </head>
   <body>
-    <h1>Ruander Oktatóközpont - PHP OOP Tanfolyam</h1>
+	<div class="container">
+		<header class="row"><!-- a row leszedi a padding 30 px-t, a col beleteszi-->
+			<div class="col-xs-12">
+				<h1>Ruander Oktatóközpont - PHP OOP Tanfolyam</h1>
+			</div>
+		</header>
+		
+		<div class="maincontent">
+			<?php require ('demo.php');?>
+		</div>
+		
+		<footer class="row">
+		<!-- md-6 esetén 960-nál van a váltás, onnantól egymás alá ugrálnak a dobozok-->
+			<div class="col-md-6">lábléc doboz 1</div>
+			<div class="col-md-6">lábléc doboz 2</div>
+		
+		</footer>
+	</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
