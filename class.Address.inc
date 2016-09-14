@@ -20,6 +20,18 @@ class Address {
     //irányítószám
     public $postal_code;
     
+    
+    // védett tulajdonságok azoknak az adatoknak, amelyeket meg szeretnénk védeni az illetéktelen írástól
+    // az _ itt csak megszokás, nem kötelező
+    // metódus nem futtatható tulajdonság megadásakor - tehát a $_time_created = time(); nem lenne jó!!
+    protected $_address_id;
+    protected $_time_created;
+    protected $_time_updated = null;
+    
+    // minden magic method publikus!
+    public function __construct() {
+        $this->_time_created = time();
+    }
     /**
      * Cím kiírása html formátumban
      * @return string;
