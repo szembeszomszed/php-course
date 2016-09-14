@@ -30,8 +30,32 @@ class Address {
     
     // minden magic method publikus!
     // a constructor alapból lefut, de lehet alakítgatni, ha többet szeretnénk tőle, mint a példány szimpla megkreálása
-    public function __construct() {
+    // ha nem kap argumentet, üres tömböt állít
+    public function __construct($data = []) {
         $this->_time_created = time();
+        
+        // nézzük meg, hogy létrehozható-e a cím - ha nem: trigger error
+        if (!is_array($data)) {
+            // kiírjuk azt is, hogy melyik osztályból jön a hiba - ez majd később lesz fontos
+            // az aktuális objektum class-át fogja kiolvasni
+            trigger_error('Nem lehetséges a címobjektum felépítése __construct segítségével a kapott adatból: '.get_class($name));
+        }
+        
+        // ha lehet, akkor létrehozzuk az objektumot a kapott adatokból
+        if (count($data) > 0) {
+            foreach ($data as $name => $value) {
+                // kivételek a védett tulajdonságoknak, hiszen ilyen tulajdonsága nincs az objektumnak
+                // a postal code-ot már kezeli a __get és a __set, úgyhogy azzal itt nem foglalkozunk
+                if (in_array($name, [
+                    'time_created', 
+                    'time_updated'
+                    ])) {
+                    $name = '_'.$name;
+                }
+                // azért kell a $ a name előtt, mert az a lokális változó a loopban, nem pedig az osztály tulajdonsága
+                $this->$name = $value;
+            }
+        }
     }
     
     /**
@@ -58,6 +82,13 @@ class Address {
         trigger_error('Nem elérhető tulajdonság __get által: '.$name);
     }
     
+    /**
+     * 
+     * @param string $name
+     * @param mixed $value
+     * @return void
+     */
+    
     public function __set($name, $value) {
         // irányítószám beállítása minden lehetséges esetben
         if ($name == 'postal_code') {
@@ -66,6 +97,8 @@ class Address {
             return;
         }
         // ha nem sikerül, jön az error
+        // innentől bármilyen egyéb tulajdonságot csűrnénk bele, nem fogja engedni
+        // de csak ha protectedről van szó
         trigger_error('Nem meghatározott vagy nem engedélyezett tulajdonságelérés __set által: '.$name);
     }
     
