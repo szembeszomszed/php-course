@@ -31,6 +31,11 @@ class Address {
     // minden magic method publikus!
     // a constructor alapból lefut, de lehet alakítgatni, ha többet szeretnénk tőle, mint a példány szimpla megkreálása
     // ha nem kap argumentet, üres tömböt állít
+    
+    /**
+     * konstruktor
+     * @param array $data
+     */
     public function __construct($data = []) {
         $this->_time_created = time();
         
@@ -100,6 +105,14 @@ class Address {
         // innentől bármilyen egyéb tulajdonságot csűrnénk bele, nem fogja engedni
         // de csak ha protectedről van szó
         trigger_error('Nem meghatározott vagy nem engedélyezett tulajdonságelérés __set által: '.$name);
+    }
+    
+    /**
+     * Magic toString
+     * @return string
+     */
+    public function __toString() {
+        return $this->display();
     }
     
     /**

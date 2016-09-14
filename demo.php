@@ -36,4 +36,8 @@ $address_2 = new Address($data);
 echo $address_2->display();
 echo '<pre>'.var_export($address_2, true).'</pre>';
 
+// ez csak akkor működik, ha megvan hozzá a __toString(), különben nem, mert pbj nem konvertálható csak úgy stringgé
+echo '<h2>Objektum közvetlen kiírása __toString() magic eljárás segítségével</h2>';
+echo $address_2;
+
 
