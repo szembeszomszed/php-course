@@ -40,4 +40,10 @@ echo '<pre>'.var_export($address_2, true).'</pre>';
 echo '<h2>Objektum közvetlen kiírása __toString() magic eljárás segítségével</h2>';
 echo $address_2;
 
+// konstansok tesztelése
+// :: scope resolution operator
+echo 'Állandó cím típusazonosítója: '.Address::ADDRESS_TYPE_RESIDENCE;
+
+echo '<pre>'.var_export(Address::$valid_address_types, true).'</pre>';
+
 

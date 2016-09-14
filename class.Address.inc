@@ -6,6 +6,23 @@
 
 // lehetőleg nagybetű, CamelCase - számmal nem kezdődhet
 class Address {
+    // osztályállandók
+    // csak primitívek lehetnek!
+    // az osztályon keresztül statikusan elérhetők
+    // tehát nem kell hozzájuk objektum
+    const ADDRESS_TYPE_RESIDENCE = 1;
+    const ADDRESS_TYPE_BUSINESS = 2;
+    const ADDRESS_TYPE_TEMPORARY = 3;
+    
+    // érvényes címtípusok
+    // a static szóval mondjuk azt, hogy nem kell hozzá objektum, hogy lekérhető legyen
+    // mert ugye ez itt nem primitív, tehát nem lehet konstanst kreálni rá
+    static $valid_address_types = [
+        // Address-szel is működik, de hardcoded, ezért jobb a self
+        Address::ADDRESS_TYPE_RESIDENCE=>'Residence',
+        self::ADDRESS_TYPE_BUSINESS=>'Business',
+        self::ADDRESS_TYPE_TEMPORARY=>'Temporary'
+    ];
     // publikus tulajdonság
     // címsor 1
     public $street_address_1;    
