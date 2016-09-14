@@ -19,5 +19,29 @@ class Address {
     public $subdivision_name;    
     //irányítószám
     public $postal_code;
+    
+    /**
+     * Cím kiírása html formátumban
+     * @return string;
+     */
+    
+    // ha jól kommenteljük, ctrl+hover-re megmutatja, hogy az adott eljárás mit csinál, és mivel tér vissza
+    public function display() {
+        $output = '<div>';
+        // a $this látja az osztály a saját példányát, így tud rá hivatkozni
+        $output .= $this->street_address_1;
+        if ($this->street_address_2) {
+            $output .= '<br>'.$this->street_address_2;
+        }
+        $output .= '<br>'.$this->postal_code.', '. $this->city_name;
+        if ($this->subdivision_name) {
+            $output .= ', '.$this->subdivision_name;
+        }
+        $output .= '<br><b>'.$this->country_name.'</b>';
+        $output .= '</div>';
+        
+        // visszatérés
+        return $output;
+    }
 }
 
