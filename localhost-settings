@@ -1,0 +1,24 @@
+
+httpd-vhosts.conf:
+<VirtualHost *:80>
+    ServerAdmin webmaster@local.oop
+    DocumentRoot "C:\xampp\htdocs\rm-oop"
+    ServerName local.oop
+    ErrorLog "logs/local.oop-error.log"
+    CustomLog "logs/local.oop-access.log" common
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot "C:\xampp\htdocs"
+    ServerName localhost
+    ErrorLog "logs/localhost-error.log"
+    CustomLog "logs/localhost-access.log" common
+</VirtualHost>
+
+
+
+hosts:
+127.0.0.1       localhost
+::1             localhost
+127.0.0.1		local.oop
