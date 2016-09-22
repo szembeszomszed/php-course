@@ -7,7 +7,7 @@ if (isset($_POST['user_name'])) {
     if ($_POST['user_name'] == "admin") {
         session_start();
         $_SESSION['name'] = $_POST['user_name']; //a session name kulcsára beállítjuk a formba beírt user_name-kulcsot
-        header("Location: products-db-admin.php"); //átírányítom a megfelelő oldalra
+        header("Location: products-db-admin-page.php"); //átírányítom a megfelelő oldalra
     } else {
     $loginError = '<p style="color: red">Incorrect username.</p>';
     }
