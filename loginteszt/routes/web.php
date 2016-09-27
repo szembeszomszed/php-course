@@ -20,6 +20,9 @@ Route::get('auth/github', 'Auth\RegisterController@redirectToProviderGithub');
 Route::get('auth/github/callback', 'Auth\RegisterController@handleProviderCallbackGithub');
 Route::auth();
 Route::get('/logout', 'Auth\LoginController@logout');
+Route::get('resizeImage', 'ImageController@resizeImage');
+Route::post('resizeImagePost',['as'=>'resizeImagePost','uses'=>'ImageController@resizeImagePost']);
+
 //Route::get('/login', function(){
 //	return 'hacked login';
 //});

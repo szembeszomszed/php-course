@@ -183,6 +183,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 		
 		Laravel\Socialite\SocialiteServiceProvider::class,
+        'Intervention\Image\ImageServiceProvider'
     ],
 
     /*
@@ -236,6 +237,7 @@ return [
 		'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
 		'Debugbar' => Barryvdh\Debugbar\Facade::class,
 		'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Image' => 'Intervention\Image\Facades\Image',
     ],
 
 ];
